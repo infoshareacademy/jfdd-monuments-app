@@ -3,7 +3,7 @@
  */
 function pobierzDaneJson() {
     $.ajax({
-        url: 'data/monuments.json',
+        url: 'data/dane-zabytkow.csv',
         //dataType: 'jsonp',
         success: function (response) {
             var kontener = $('map');
