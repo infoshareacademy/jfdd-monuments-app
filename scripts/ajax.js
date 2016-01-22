@@ -1,17 +1,18 @@
 /**
  * Created by gosia on 21.01.16.
  */
-function pobierzDaneJson() {
+function fetchZabytki() {
+    console.log('fetch zabytki');
     $.ajax({
         url: 'data/dane-zabytkow.csv',
-        //dataType: 'jsonp',
-        success: function (response) {
-            var kontener = $('map');
-            response.forEach(function (monument) {
-
-
-            });
+        success: function(response) {
+            console.log('FETCHED', response);
+        },
+        error: function(err, std) {
+            console.debug('ERROR', err, std);
         }
-    });
-
+    })
 }
+$(document).ready(function() {
+    fetchZabytki();
+});

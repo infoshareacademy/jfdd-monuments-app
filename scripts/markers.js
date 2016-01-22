@@ -5,12 +5,10 @@
 $(document).ready(function() {
 });
 
-
-
-
-
 //adding extra markers
-var myLatlng = new google.maps.LatLng(54.3489369,18.6517482);
+var myLatlng = new google.maps.LatLng(
+
+);
 var mapOptions = {
     zoom: 14,
     center: myLatlng
