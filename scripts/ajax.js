@@ -6,7 +6,8 @@ function fetchZabytki() {
     $.ajax({
         url: 'data/dane-zabytkow.csv',
         success: function(response) {
-            console.log('FETCHED', response);
+            //console.log('FETCHED', response);
+            //wyswietlenie w konsoli wszytich zabytkow (f12)
         },
         error: function(err, std) {
             console.debug('ERROR', err, std);
