@@ -165,14 +165,10 @@ body {
     margin: 0.5em 0;
 }
 
-
-
 /*MapOfGdansk*/
-
-
 .mapOfGdansk{
     padding: 40px 0;
-    background: url("../images/Vogel-brama-1.jpg ") no-repeat center;
+    /*background: url("../images/Vogel-brama-1.jpg ") no-repeat center;*/
     background-size: cover;
     background-attachment: fixed;
 }
@@ -186,8 +182,8 @@ body {
 }
 
 .map{
-  width: 800px;
-    height:800px;
-    border: 5px solid darkred;
-    margin-left: 30%;
+  width: 1300px;
+    height:900px;
+    /*border: 5px solid darkred;*/
+    margin-left: 20%;
 }

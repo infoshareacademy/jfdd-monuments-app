@@ -12,23 +12,23 @@
 //var myCenter=new google.maps.LatLng(54.349333, 18.65025);
 ////
 ////////mapa Europy
-//////function initialize()
-//////{
-//////    var mapProp = {
-//////        center: myCenter,
-//////        zoom:5,
-//////        mapTypeId: google.maps.MapTypeId.ROADMAP
-//////    };
-//////
-//////     map = new google.maps.Map(document.getElementById("map"),mapProp);
-//////
-//////    var marker = new google.maps.Marker({
-//////        position: myCenter,
-//////        title:'Click to zoom'
-//////    });
-////
-////    marker.setMap(map);
-////
+//function initialize()
+//{
+//    var mapProp = {
+//        center: myCenter,
+//        zoom:5,
+//        mapTypeId: google.maps.MapTypeId.ROADMAP
+//    };
+//
+//     map = new google.maps.Map(document.getElementById("map"),mapProp);
+//
+//    var marker = new google.maps.Marker({
+//        position: myCenter,
+//        title:'Click to zoom'
+//    });
+//
+//    marker.setMap(map);
+//
 //
 //
 //// po kliknieciu na markera, ustawiony zoom na Gdansk
