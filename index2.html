@@ -14,9 +14,10 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
     <link href='https://fonts.googleapis.com/css?family=Oswald:700,400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-    <link type="text/css" rel="stylesheet" href="style/reset.css">
+    <!--<link type="text/css" rel="stylesheet" href="style/reset.css">-->
     <!--<link type="text/css" rel="stylesheet" href="style/animate.css">-->
     <link type="text/css" rel="stylesheet" href="style/style2.css">
+
     <!--<link type="text/css" rel="stylesheet" href="style/easteregg.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -25,21 +26,27 @@
 <body>
 
 <!--NAGLÓWEK-->
-<header class="header" id="nasz_header">
+<header>
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="tlonaglowka">
+                <img id="logo2" src="images\obraz_naglowek.jpg">
 
-    <img id="logo2" src="images\obraz_naglowek.jpg">
 
-    <!--MOTTO GDANSK-->
-    <h1 class="motto">
-        <span class="motto__gdansk animated fadeInDown">
-            Gdańsk,
-        </span>
-        <span class="motto__miasto animated fadeInLeft">
-            miasto które chcesz poznać
-        </span>
-    </h1>
+            <div class="col-sm-12">
+                <!--MOTTO GDANSK-->
+                <h1 class="motto">
+                    <span class="motto__gdansk animated fadeInDown">
+                        Gdańsk,
+                    </span>
+                    <span class="motto__miasto animated fadeInLeft">
+                        miasto które chcesz poznać
+                    </span>
+                </h1>
+            </div>
+        <div>
+    </div>
 </header>
-
 
 
 <!--MENU-->
@@ -53,8 +60,6 @@
         <div class="menu_div_feat menu_div hover_orange">
             <a href="#maps">Mapa</a>
         </div>
-
-
 
         <div class="menu_div_contact menu_div hover_orange">
             <a href="#contact_id">Kontakt</a>
@@ -87,8 +92,14 @@
     </section>
 </main>
 <section class="mapOfGdansk">
-    <!--<h2> Mapa Gdańska</h2>-->
-    <div class="map" id="map">
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-8">
+            <!--<h2> Mapa Gdańska</h2>-->
+            <div class="map" id="map">
+            </div>
+        </div>
+        <div class="col-sm-2"></div>
     </div>
 </section>
 <script src="scripts/jquery-2.1.4.min.js"></script>
@@ -100,6 +111,25 @@
 <script src="scripts/ajax.js"></script>
 <script src="scripts/csv2jason.js"></script>
 
+<!--FOOTER -->
+<footer>
+    <div class="stopka">Copyright 2015 | All Rights Reserved - Wunder Team</div>
+    <div class="partnerzy">
+        <img src="images/stopka_olivia_center.jpg" alt="Olivia Center logo">
+        <img src="images/stopka_Wteam2.jpg" alt="WunderTeam logo">
+        <a href="http://www.infoshareacademy.com/" target="_blank">
+            <img src="images/stopka_infoshare.svg" alt="InfoShare Academy">
+        </a>
+    </div>
+</footer>
+<!-- ponizej pobieramy jQuery z google hosted libraries -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+            <script src="scripts/slajdy.js"></script>
+<script src="scripts/parallax.js"></script>
+<script src="scripts/bootvalidator.js"></script>
+<script src="scripts/easteregg.js"></script>
+<script src="scripts/menu_move.js"></script>
+<script src="scripts/zaloguj.js"></script>
 
 </body>
 </html>

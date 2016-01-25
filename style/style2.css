@@ -5,10 +5,10 @@ body {
     background-color: #f9f9f9;
 }
 
-.header {
+.tlonaglowka {
     position: relative;
     background: url("../images/galeriaMuseaPicture4.jpg") no-repeat;
-    background-position: 0 -400px;
+    /*background-position: 0 -400px;*/
     height: 770px;
 }
 
@@ -186,8 +186,33 @@ body {
 }
 
 .map{
-  width: 800px;
-    height:800px;
+    /*width: 800px;*/
+    height: 800px;
+    margin: auto;
     border: 5px solid darkred;
-    margin-left: 30%;
+
+}
+
+.stopka {
+    height: 26px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    background: url(../images/naglowek_gdansk1.jpg);
+    /* padding zamiast height na sztywno ponieważ tak się wysokość dostosuje do zawartości gdyby zawartość miała się zmienić */
+    padding: 20px 20px 10px 20px;
+    text-align: center;
+    text-shadow: black 0 2px 0;
+
+
+}
+
+.partnerzy {
+    text-align: center;
+    padding: 8px 20px;
+}
+.partnerzy img {
+    height: 26px;
 }
