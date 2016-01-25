@@ -5,11 +5,13 @@ body {
     background-color: #f9f9f9;
 }
 
-.tlonaglowka {
+.header {
     position: relative;
     background: url("../images/galeriaMuseaPicture4.jpg") no-repeat;
     /*background-position: 0 -400px;*/
-    height: 770px;
+    height: 670px;
+    background-size: cover;
+    /*background-attachment: fixed;*/
 }
 
 #logo2 {
@@ -45,6 +47,25 @@ body {
     margin-top: 15px;
     margin-left: 80px;
 }
+
+@media screen and (max-width: 600px){
+    #logo2 {
+        display: none;
+    }
+    .motto {
+        font-size: 40px;
+        left: 40px;
+    }
+    .motto__miasto {
+        font-size: 30px;
+
+        margin-left: 20px;
+    }
+    .header {
+        height: 335px;
+    }
+}
+
 
 /*MENU*/
 
@@ -151,21 +172,15 @@ body {
 
 .listaZaciagnietychZabytkow {
     text-transform: uppercase;
-    text-align: justify;
+    /*text-align: justify;*/
     /*height: 250px;*/
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 300;
     font-size: 28px;
     color: #000000;
-    margin: 5% 15% 3% 15%;
+    margin-top: 30px;
     padding-bottom: 20px;
 }
-
-.listaZaciagnietychZabytkow p {
-    margin: 0.5em 0;
-}
-
-
 
 /*MapOfGdansk*/
 
@@ -194,7 +209,7 @@ body {
 }
 
 .stopka {
-    height: 26px;
+
     color: white;
     text-transform: uppercase;
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
@@ -202,11 +217,9 @@ body {
     font-size: 18px;
     background: url(../images/naglowek_gdansk1.jpg);
     /* padding zamiast height na sztywno ponieważ tak się wysokość dostosuje do zawartości gdyby zawartość miała się zmienić */
-    padding: 20px 20px 10px 20px;
+    padding: 20px;
     text-align: center;
     text-shadow: black 0 2px 0;
-
-
 }
 
 .partnerzy {

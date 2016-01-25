@@ -11,7 +11,8 @@ var myLatlng = new google.maps.LatLng(54.3485481,18.6510355)
 ;
 var mapOptions = {
     zoom: 14,
-    center: myLatlng
+    center: myLatlng,
+    scrollwheel: false
 }
 var cityTown = new google.maps.Map(document.getElementById("map"), mapOptions);
 
