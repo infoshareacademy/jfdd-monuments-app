@@ -1,16 +1,6 @@
 /**
- * Created by gosia on 20.01.16.
+ * Created by Gosia on 20.01.16.
 */
-
-
-////// ten marker nie będzie klikalny
-//dodajMarker(54.3485481,18.6510355,{title: 'Muzeum y', clickable: false});
-////
-////// to będzie zwykły marker z tooltipem
-//dodajMarker(54.3485481,18.6510355,{title: 'Muzeum xy'});
-////
-
-
 var map;
 var lat = 54.3485481;
 var lng = 18.6510855;
@@ -45,10 +35,7 @@ function initialize() {
         ['Kanal na Stepce', 54.3524662,18.6583352],
         ['Dlugi Targ', 54.3483121,18.6518724],
         ['Zlota Brama', 54.3497813,18.6457724]
-
-
     ];
-
     var draftMarker, myLatLng, marker;
     for (var i = 0; i < markers.length; i++) {
         draftMarker = markers[i];
@@ -58,10 +45,8 @@ function initialize() {
             map: map,
             title: draftMarker[0]
         });
-
         marker.setMap(map);
     }
 
 }
-
 google.maps.event.addDomListener(window, 'load', initialize);
