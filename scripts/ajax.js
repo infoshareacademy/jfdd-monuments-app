@@ -5,8 +5,13 @@ function fetchZabytki() {
     console.log('fetch zabytki');
     $.ajax({
         url: 'data/dane-zabytkow.csv',
-        success: function(response) {
-            //console.log('FETCHED', response);
+        success: function(csvZabytki) {
+            console.log('FETCHED', csvZabytki);
+
+            var daneZabytkow = CSV2JSON (csvZabytki, ',');
+
+            console.log(daneZabytkow);
+
             //wyswietlenie w konsoli wszytich zabytkow (f12)
         },
         error: function(err, std) {
