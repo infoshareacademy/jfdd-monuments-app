@@ -208,6 +208,14 @@ body {
 
 }
 
+/*info o zabytkach*/
+
+.szczegoloweInfo {
+    background-color: orange;
+    border: darkred solid 1px;
+
+}
+
 .stopka {
 
     color: white;
