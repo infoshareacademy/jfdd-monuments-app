@@ -3,7 +3,9 @@
 
 <html lang="pl">
 <head>
+
     <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
     <meta name="description" content="Zabytki Gdańska">
     <meta name="author" content="Wunder Team">
     <meta name="keywords" content="zabytki, gdansk">
@@ -12,18 +14,21 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
     <link href='https://fonts.googleapis.com/css?family=Oswald:700,400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
-    <link type="text/css" rel="stylesheet" href="style/reset.css">
+    <!--<link type="text/css" rel="stylesheet" href="style/reset.css">-->
     <!--<link type="text/css" rel="stylesheet" href="style/animate.css">-->
     <link type="text/css" rel="stylesheet" href="style/style2.css">
+
     <!--<link type="text/css" rel="stylesheet" href="style/easteregg.css">-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
 </head>
 
 <body>
-
+    <a name="dogory"></a>
 <!--NAGLÓWEK-->
-<header class="header" id="nasz_header">
+<header class="header">
 
-    <img id="logo2" src="images\obraz_naglowek.jpg">
+      <img id="logo2" src="images\obraz_1196.jpg">
 
     <!--MOTTO GDANSK-->
     <h1 class="motto">
@@ -37,20 +42,17 @@
 </header>
 
 
-
 <!--MENU-->
 <nav class="menu_gl">
     <div>
 
         <div class="menu_div_header menu_div hover_orange">
-            <a href="#nasz_header">Główna</a>
+            <a href="#dogory">Główna</a>
         </div>
 
         <div class="menu_div_feat menu_div hover_orange">
-            <a href="#maps">Mapa</a>
+            <a href="#domapy">Mapa</a>
         </div>
-
-
 
         <div class="menu_div_contact menu_div hover_orange">
             <a href="#contact_id">Kontakt</a>
@@ -77,16 +79,23 @@
         </a>
     </div>
 </aside>
-<main>
-    <section class="listaZaciagnietychZabytkow">
-        <p>zaciagniete zabytki z api Gdanska </p>
+
+<main class="container-fluid">
+    <section class="listaZaciagnietychZabytkow row">
+
+            <h2 class="col-xs-10 col-xs-offset-1"><a name="domapy"></a>Zabytki zaciągnięte z API Gdańska</h2>
+
+    </section>
+
+    <section class="mapOfGdansk row">
+
+            <div class="col-sm-10 col-sm-offset-1">
+                <!--<h2> Mapa Gdańska</h2>-->
+                <div class="map" id="map"></div>
+            </div>
+
     </section>
 </main>
-<section class="mapOfGdansk">
-    <!--<h2> Mapa Gdańska</h2>-->
-    <div class="map" id="map">
-    </div>
-</section>
 <script src="scripts/jquery-2.1.4.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <!--<script src="scripts/parallax.js"></script>-->
@@ -94,6 +103,25 @@
 <script src="scripts/ajax.js"></script>
 <script src="scripts/csv2jason.js"></script>
 
+<!--FOOTER -->
+<footer>
+    <div class="stopka">Copyright 2015 | All Rights Reserved - Wunder Team</div>
+    <div class="partnerzy">
+        <img src="images/stopka_olivia_center.jpg" alt="Olivia Center logo">
+        <img src="images/stopka_Wteam2.jpg" alt="WunderTeam logo">
+        <a href="http://www.infoshareacademy.com/" target="_blank">
+            <img src="images/stopka_infoshare.svg" alt="InfoShare Academy">
+        </a>
+    </div>
+</footer>
+
+    <!-- ponizej pobieramy jQuery z google hosted libraries -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+
+<script src="scripts/bootvalidator.js"></script>
+
+<script src="scripts/menu_move.js"></script>
+<script src="scripts/zaloguj.js"></script>
 
 </body>
 </html>

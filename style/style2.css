@@ -8,8 +8,10 @@ body {
 .header {
     position: relative;
     background: url("../images/galeriaMuseaPicture4.jpg") no-repeat;
-    background-position: 0 -400px;
-    height: 770px;
+    /*background-position: 0 -400px;*/
+    height: 670px;
+    background-size: cover;
+    /*background-attachment: fixed;*/
 }
 
 #logo2 {
@@ -45,6 +47,25 @@ body {
     margin-top: 15px;
     margin-left: 80px;
 }
+
+@media screen and (max-width: 600px){
+    #logo2 {
+        display: none;
+    }
+    .motto {
+        font-size: 40px;
+        left: 40px;
+    }
+    .motto__miasto {
+        font-size: 30px;
+
+        margin-left: 20px;
+    }
+    .header {
+        height: 335px;
+    }
+}
+
 
 /*MENU*/
 
@@ -151,7 +172,7 @@ body {
 
 .listaZaciagnietychZabytkow {
     text-transform: uppercase;
-    text-align: justify;
+
     /*height: 250px;*/
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 300;
@@ -161,16 +182,14 @@ body {
     padding-bottom: 20px;
 }
 
-.listaZaciagnietychZabytkow p {
-    margin: 0.5em 0;
-}
+/*MapOfGdansk*/
+
 
 .mapOfGdansk{
-    /*padding: 40px 0;*/
-    /*background-size: cover;*/
-    /*background-attachment: fixed;*/
-    left:0;
-    right: 0;
+    padding: 40px 0;
+    background: url("../images/Vogel-brama-1.jpg ") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .mapOfGdansk h2{
     text-align: center;
@@ -182,6 +201,31 @@ body {
 }
 
 .map{
-    height:900px;
-    margin-left: 20%;
+    /*width: 800px;*/
+    height: 800px;
+    margin: auto;
+    border: 5px solid darkred;
+
+}
+
+.stopka {
+
+    color: white;
+    text-transform: uppercase;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    background: url(../images/naglowek_gdansk1.jpg);
+    /* padding zamiast height na sztywno ponieważ tak się wysokość dostosuje do zawartości gdyby zawartość miała się zmienić */
+    padding: 20px;
+    text-align: center;
+    text-shadow: black 0 2px 0;
+}
+
+.partnerzy {
+    text-align: center;
+    padding: 8px 20px;
+}
+.partnerzy img {
+    height: 26px;
 }
