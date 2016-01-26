@@ -7,13 +7,14 @@ function showMonumentsWithGeographicalData(data){
     data = JSON.parse(data);
     console.log(data);
     data.filter(function (monument) {
-        return monument.Dlugosc && monument.Szerokosc;
+        return  monument.Obiekt && monument.Dlugosc && monument.Szerokosc;
     }).map(function(monument) {
         var html = '';
-        html += '<li>';
-        html += '<h3>' + monument.Dlugosc + '</h3>';
+        //<h3> DANE Z RZECZYWISTEGO API</h3>
+        html += '<li>' + monument.Obiekt + '</li>';
+        html += '<p>' + monument.Dlugosc + '</p>';
         html += '<p>' + monument.Szerokosc + '</p>';
-        html += '</li>';
+
         return html;
     }).forEach(function (htmlPart) {
         html += htmlPart;

@@ -4,7 +4,7 @@
 var map;
 var lat = 54.3485481;
 var lng = 18.6510855;
-var zoom = 12;
+var zoom = 13;
 
 function initialize() {
     var myLatlng = new google.maps.LatLng(lat, lng);
@@ -36,6 +36,8 @@ function initialize() {
         ['Dlugi Targ', 54.3483121,18.6518724],
         ['Zlota Brama', 54.3497813,18.6457724]
     ];
+
+    var image = 'images/blue_MarkerZ.png';
     var draftMarker, myLatLng, marker;
     for (var i = 0; i < markers.length; i++) {
         draftMarker = markers[i];
@@ -43,7 +45,8 @@ function initialize() {
         marker = new google.maps.Marker({
             position: myLatLng,
             map: map,
-            title: draftMarker[0]
+            title: draftMarker[0],
+            icon: image
         });
         marker.setMap(map);
     }
