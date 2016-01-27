@@ -1,6 +1,4 @@
-/**
- * Created by gosia on 21.01.16.
- */
+
 function fetchZabytki() {
     console.log('fetch zabytki');
     $.ajax({
