@@ -6,7 +6,7 @@ var $jsonFetchingStatusContainer = $('#json-fetching-status');
 
 $jsonFetchingStatusContainer.text('Fetching...');
 $.ajax({
-    url: 'data/',
+    url: 'data/dworartusa.json',
     data: {},
     dataType: 'jsonp',
     jsonp: 'callback',
