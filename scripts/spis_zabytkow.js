@@ -1,11 +1,11 @@
-function listaZabytkow() {
+function listaZabytkowWTablicach() {
     console.log('Trwa skomplikowany proces zaciągania danych :)');
     $.ajax({
         url: 'data/spis_zabytkow.csv',
         success: function(csvZabytki) {
             console.log('FETCHED', csvZabytki);
 
-            var daneZabytkow = CSV2JSON (csvZabytki, ',');
+            var daneZabytkow = CSVToArray (csvZabytki, ',');
 
             console.log(daneZabytkow);
 
@@ -17,5 +17,5 @@ function listaZabytkow() {
     })
 }
 $(document).ready(function() {
-    listaZabytkow();
+    listaZabytkowWTablicach();
 });
