@@ -210,10 +210,36 @@ body {
 
 /*info o zabytkach*/
 
-.wywolanie__info__zabytki {
+.form__info__zabytki {
+    position: fixed;
+    left: 25vw;
+    right: 25vw;
+    top: 30vh;
+    z-index: 1000;
+    display: none;
+    padding: 50px;
     background-color: orange;
-    border: darkred solid 5px;
+    border-radius: 10px;
+    color: white;
+}
 
+.close__info__zabytki {
+    background: gray;
+    padding: 0px 10px 16px;
+    display: inline-block;
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    border-radius: 5%;
+    cursor: pointer;
+    font-size: 4em;
+    font-weight: 500;
+    line-height: 0.5em;
+    z-index: 1001;
+}
+
+.close__info__zabytki {
+    color: yellow;
 }
 
 .stopka {
