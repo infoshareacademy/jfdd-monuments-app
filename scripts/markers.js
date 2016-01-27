@@ -4,7 +4,7 @@
 var map;
 var lat = 54.3485481;
 var lng = 18.6510855;
-var zoom = 13;
+var zoom = 14;
 
 function initialize() {
     var myLatlng = new google.maps.LatLng(lat, lng);
