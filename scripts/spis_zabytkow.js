@@ -1,14 +1,13 @@
-
-function fetchZabytki() {
-    //console.log('fetch zabytki');
+function listaZabytkow() {
+    console.log('Trwa skomplikowany proces zaciągania danych :)');
     $.ajax({
-        url: 'data/dane-zabytkow.csv',
+        url: 'data/spis_zabytkow.csv',
         success: function(csvZabytki) {
-            //console.log('FETCHED', csvZabytki);
+            console.log('FETCHED', csvZabytki);
 
             var daneZabytkow = CSV2JSON (csvZabytki, ',');
 
-            //console.log(daneZabytkow);
+            console.log(daneZabytkow);
 
             //wyswietlenie w konsoli wszytich zabytkow (f12)
         },
@@ -18,5 +17,5 @@ function fetchZabytki() {
     })
 }
 $(document).ready(function() {
-    fetchZabytki();
+    listaZabytkow();
 });
