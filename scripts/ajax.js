@@ -2,27 +2,28 @@
  * Created by gosia on 21.01.16.
  */
 function showMonumentsWithGeographicalData(data){
-    var html = '<ul data-role="Dane z rzeczywistego API">';
+
 
     data = JSON.parse(data);
     console.log(data);
     data.filter(function (monument) {
-        return  monument.Obiekt && monument.Dlugosc && monument.Szerokosc;
+        return  monument.Obiekt  && monument.Ulica && monument.Nr && monument.Dlugosc && monument.Szerokosc;
     }).map(function(monument) {
         var html = '';
-        //<h3> DANE Z RZECZYWISTEGO API</h3>
-        html += '<li>' + monument.Obiekt + '</li>';
-        html += '<p>' + monument.Dlugosc + '</p>';
-        html += '<p>' + monument.Szerokosc + '</p>';
-
+        html += '<td>' + monument.Obiekt + '</td>';
+        html += '<td>' + monument.Ulica + '</td>';
+        html += '<td>' + monument.Nr + '</td>';
         return html;
     }).forEach(function (htmlPart) {
-        html += htmlPart;
+        $('.rzeczywisteDane').append(
+            '<tr data-role="Dane z rzeczywistego API">' +
+            htmlPart +
+            '</tr>'
+        );
     });
 
-    html += '</ul>';
-    $('.rzeczywisteDane').html(html);
 }
+
 
 function fetchZabytki() {
     console.log('fetch zabytki');
