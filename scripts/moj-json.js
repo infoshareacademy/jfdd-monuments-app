@@ -2,20 +2,42 @@
  * Created by lukaszd on 27.01.16.
  */
 
-var $jsonFetchingStatusContainer = $('#json-fetching-status');
+    $(function () {
+        var $jsonFetchingStatusContainer = $('#json-fetching-status');
 
-$jsonFetchingStatusContainer.text('Fetching...');
-$.ajax({
-    url: 'data/dworartusa.json',
-    data: {},
-    dataType: 'jsonp',
-    jsonp: 'callback',
-    success: function (response) {
-        $('#json-feed').append(process(response).
-        map(function (item) {
-            return $('<li>' + item.title + ' <small>' + item.pubDate + '</small></li>');
-        }));
+        $jsonFetchingStatusContainer.text('Fetching...');
+        $.ajax({
+            url: 'data/dworartusa.json',
+            success: function (item) {
 
-        $jsonFetchingStatusContainer.text('Fetched.');
-    }
-});
+                $('.targetForJSON').append(
+                    $('<li>' + item.name + ' <small>' + item.description + '</small></li>')
+                );
+
+                $jsonFetchingStatusContainer.text('Fetched.');
+            }
+        });
+    });
+
+//
+//.map(function (item) {
+//    var liNode = $('<li>');
+//    var linkNode = $('<a>');
+//    var smallNode = $('<small>').css({ display: 'block', fontStyle: 'italic' });
+//    var guidNode = $('<a>');
+//
+//    // <small> tag creation
+//    smallNode.text(item.pubDate);
+//
+//    // <li> tag creation
+//    linkNode.attr('href', item.link);
+//    linkNode.text(item.title);
+//
+//    guidNode.attr('href', item.guid);
+//    guidNode.text(item.guid);
+//
+//    liNode
+//        .append(linkNode, smallNode, guidNode, '<br>', '<br>');
+//
+//    return liNode;
+//});
