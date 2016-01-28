@@ -12,7 +12,7 @@ function showMonumentsWithGeographicalData(data){
 
 
     var monumentsWithCords = data.filter(function (monument) {
-        return  monument.Dlugosc && monument.Szerokosc;
+        return  monument.Dlugosc && monument.Szerokosc && monument.lp;
     });
 
     var map;
@@ -39,7 +39,13 @@ function showMonumentsWithGeographicalData(data){
             position: myLatLng,
             map: map,
             title: monument.Obiekt,
-            icon: image
+            icon: image,
+            attributes: {'id': monument.lp}
+        });
+
+        marker.addListener('click', function() {
+            console.log("Clicked marker: " + marker)
+            //showMonumentDetails(marker.attributes['id']);
         });
 
         return marker;
@@ -48,9 +54,8 @@ function showMonumentsWithGeographicalData(data){
     //markerInstances.forEach(function (marker) {
     //    marker.setMap(map);
 
-    var markerCluster = new MarkerClusterer(map, markerInstances);
+    //var markerCluster = new MarkerClusterer(map, markerInstances);
 
-    });
 
     monumentsWithCords.map(function(monument) {
         var html = '';
