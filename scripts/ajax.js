@@ -45,8 +45,10 @@ function showMonumentsWithGeographicalData(data){
         return marker;
     });
 
-    markerInstances.forEach(function (marker) {
-        marker.setMap(map);
+    //markerInstances.forEach(function (marker) {
+    //    marker.setMap(map);
+
+    var markerCluster = new MarkerClusterer(map, markerInstances);
 
     });
 
