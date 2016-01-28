@@ -1,17 +1,9 @@
 /**
- * Created by gosia on 21.01.16.
+ * Created by Gosia on 21.01.16.
  */
 function showMonumentsWithGeographicalData(data){
     data = JSON.parse(data);
     console.log(data);
-
-
-
-
-
-
-
-
 
     var monumentsWithCords = data.filter(function (monument) {
         return  monument.Dlugosc && monument.Szerokosc;
@@ -23,16 +15,14 @@ function showMonumentsWithGeographicalData(data){
     var map;
     var lat = 54.3485481;
     var lng = 18.6510855;
-    var zoom = 13;
+    var zoom = 14;
 
     var myLatlng = new google.maps.LatLng(lat, lng);
     var myOptions = {
         zoom: zoom,
         center: myLatlng,
-        navigationControl: false,
-        mapTypeControl: false,
         scaleControl: false,
-        draggable: false,
+        //draggable: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map"), myOptions);
@@ -87,3 +77,4 @@ function fetchZabytki() {
 $(document).ready(function() {
     fetchZabytki();
 });
+
