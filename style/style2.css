@@ -172,7 +172,7 @@ body {
 
 .listaZaciagnietychZabytkow {
     text-transform: uppercase;
-    /*text-align: justify;*/
+
     /*height: 250px;*/
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 300;
@@ -228,4 +228,9 @@ body {
 }
 .partnerzy img {
     height: 26px;
+}
+
+.dane h4{
+
+    color: darkred;
 }
