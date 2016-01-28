@@ -1,17 +1,15 @@
 /**
- * Created by gosia on 21.01.16.
+ * Created by Gosia on 21.01.16.
  */
-
 function showMonumentsWithGeographicalData(data){
     data = JSON.parse(data);
-    // console.log(data);
-
-    //data.sort(function (Obiekt){
-    //    return parseString(ASC).Obiekt;
-    //});
+    console.log(data);
 
     var monumentsWithCords = data.filter(function (monument) {
-        return  monument.Dlugosc && monument.Szerokosc && monument.lp;
+        return  monument.Dlugosc && monument.Szerokosc;
+    }).sort(function (a, b){
+
+        return $.trim(a.Obiekt) > $.trim(b.Obiekt) ? 1 : -1;
     });
 
     var map;
@@ -23,11 +21,8 @@ function showMonumentsWithGeographicalData(data){
     var myOptions = {
         zoom: zoom,
         center: myLatlng,
-        navigationControl: false,
-        mapTypeControl: false,
         scaleControl: false,
-        // draggable: false,
-		scrollwheel: false,
+        //draggable: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map"), myOptions);
@@ -39,22 +34,16 @@ function showMonumentsWithGeographicalData(data){
             position: myLatLng,
             map: map,
             title: monument.Obiekt,
-            icon: image,
-            attributes: {'id': monument.lp}
-        });
-
-        marker.addListener('click', function() {
-            console.log("Clicked marker: " + marker)
-            //showMonumentDetails(marker.attributes['id']);
+            icon: image
         });
 
         return marker;
     });
 
-    //markerInstances.forEach(function (marker) {
-    //    marker.setMap(map);
+    markerInstances.forEach(function (marker) {
+        marker.setMap(map);
+    });
 
-    //var markerCluster = new MarkerClusterer(map, markerInstances);
 
 
     monumentsWithCords.map(function(monument) {
@@ -72,22 +61,13 @@ function showMonumentsWithGeographicalData(data){
     });
 
 }
-
 function fetchZabytki() {
-    //console.log('fetch zabytki');
+    console.log('fetch zabytki');
     $.ajax({
         url: 'data/dane-zabytkow.csv',
         success: function(csvZabytki) {
             var daneZabytkow = CSV2JSON (csvZabytki, ',');
-
             showMonumentsWithGeographicalData(daneZabytkow);
-            //console.log('FETCHED', csvZabytki);
-
-            var daneZabytkow = CSV2JSON (csvZabytki, ',');
-
-            //console.log(daneZabytkow);
-
-            //wyswietlenie w konsoli wszytich zabytkow (f12)
         },
         error: function(err, std) {
             console.debug('ERROR', err, std);
@@ -97,3 +77,4 @@ function fetchZabytki() {
 $(document).ready(function() {
     fetchZabytki();
 });
+

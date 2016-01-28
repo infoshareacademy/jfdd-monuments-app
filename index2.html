@@ -95,7 +95,7 @@
 		</div>
     </section>
 
-    <section class="mapOfGdansk row row-eq-height">
+    <section class="mapOfGdansk row">
 
         <div class="col-md-3">
             <div class="form__info__zabytki">
@@ -105,13 +105,14 @@
 
         <section class="col-md-9">
 			<div class="map" id="map"></div>
-			<div class="dane"></div>
-			<h4> RZECZYWISTE DANE GDANSKA</h4>
-			<table class="rzeczywisteDane">
+			<div class="dane container">
+                <h4> DANE Z RZECZYWISTEGO API</h4>
+            </div>
+			<table class="rzeczywisteDane table table-striped row">
 				<tr>
-					<td> NAZWA ZABYTKU</td>
-					<td> NR </td>
-					<td> ULICA </td>
+					<td class="col-xs-7"> NAZWA ZABYTKU</td>
+					<td class="col-xs-1"> NR </td>
+					<td class="col-xs-4"> ULICA </td>
 				</tr>
 			</table>
         </section>
@@ -122,6 +123,7 @@
     <!--*****info o zabytkach ******-->
 
 </main>
+
 
 <!--FOOTER -->
 <footer>
@@ -139,6 +141,7 @@
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <!--<script src="scripts/parallax.js"></script>-->
 <script src="scripts/markers.js"></script>
+<script src="scripts/rzeczywistaMapa.js"></script>
 <script src="scripts/ajax.js"></script>
 <script src="scripts/csv2jason.js"></script>
 <!--<script src="scripts/info_zabytki.js"></script>-->
