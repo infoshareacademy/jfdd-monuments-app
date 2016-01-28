@@ -47,4 +47,37 @@ function showMonumentsWithGeographicalData(data){
 
     markerInstances.forEach(function (marker) {
         marker.setMap(map);
+
     });
+
+    monumentsWithCords.map(function(monument) {
+        var html = '';
+        html += '<td>' + monument.Obiekt + '</td>';
+        html += '<td>' + monument.Ulica + '</td>';
+        html += '<td>' + monument.Nr + '</td>';
+        return html;
+    }).forEach(function (htmlPart) {
+        $('.rzeczywisteDane').append(
+            '<tr data-role="Dane z rzeczywistego API">' +
+            htmlPart +
+            '</tr>'
+        );
+    });
+
+}
+function fetchZabytki() {
+    console.log('fetch zabytki');
+    $.ajax({
+        url: 'data/dane-zabytkow.csv',
+        success: function(csvZabytki) {
+            var daneZabytkow = CSV2JSON (csvZabytki, ',');
+            showMonumentsWithGeographicalData(daneZabytkow);
+        },
+        error: function(err, std) {
+            console.debug('ERROR', err, std);
+        }
+    })
+}
+$(document).ready(function() {
+    fetchZabytki();
+});
