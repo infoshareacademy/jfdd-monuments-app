@@ -1,5 +1,4 @@
 body {
-
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 300;
     background-color: #f9f9f9;
@@ -212,9 +211,11 @@ body {
 
 .form__info__zabytki {
     border: solid 5px darkred;
+	padding: 10px;
+	background: rgba(255,255,255,0.7);
     /*padding: 40px 0;*/
     /*width: 1000px;*/
-    height: 800px;
+    // height: 800px;
     /*position:fixed;*/
     /*top: 60vh;*/
     right:0;
@@ -278,6 +279,17 @@ body {
 }
 
 .dane h4{
-
     color: darkred;
+}
+
+#lista {
+	margin: 20px 0;
+	width: 100%;
+}
+#lista td {
+    font-size: 12px;
+	padding: 2px; 
+}
+#lista tr:nth-child(2n+1) td {
+	background: #ccc;
 }

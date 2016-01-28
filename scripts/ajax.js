@@ -4,12 +4,11 @@
 
 function showMonumentsWithGeographicalData(data){
     data = JSON.parse(data);
-    console.log(data);
+    // console.log(data);
 
     //data.sort(function (Obiekt){
     //    return parseString(ASC).Obiekt;
     //});
-
 
     var monumentsWithCords = data.filter(function (monument) {
         return  monument.Dlugosc && monument.Szerokosc && monument.lp;
@@ -27,7 +26,8 @@ function showMonumentsWithGeographicalData(data){
         navigationControl: false,
         mapTypeControl: false,
         scaleControl: false,
-        draggable: false,
+        // draggable: false,
+		scrollwheel: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map"), myOptions);
@@ -72,13 +72,22 @@ function showMonumentsWithGeographicalData(data){
     });
 
 }
+
 function fetchZabytki() {
-    console.log('fetch zabytki');
+    //console.log('fetch zabytki');
     $.ajax({
         url: 'data/dane-zabytkow.csv',
         success: function(csvZabytki) {
             var daneZabytkow = CSV2JSON (csvZabytki, ',');
+
             showMonumentsWithGeographicalData(daneZabytkow);
+            //console.log('FETCHED', csvZabytki);
+
+            var daneZabytkow = CSV2JSON (csvZabytki, ',');
+
+            //console.log(daneZabytkow);
+
+            //wyswietlenie w konsoli wszytich zabytkow (f12)
         },
         error: function(err, std) {
             console.debug('ERROR', err, std);
