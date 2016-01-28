@@ -211,13 +211,13 @@ body {
 /*info o zabytkach*/
 
 .form__info__zabytki {
-    background-color: orange;
-    border: solid 3px darkred;
+    border: solid 5px darkred;
+    /*padding: 40px 0;*/
     /*width: 1000px;*/
-    /*height: 500px;*/
+    height: 800px;
     /*position:fixed;*/
     /*top: 60vh;*/
-    left:0;
+    right:0;
     /*bottom: 1000px;*/
     /*padding:20px;*/
     z-index:10000;

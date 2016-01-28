@@ -11,7 +11,7 @@
             success: function (item) {
 
                 $('.targetForJSON').append(
-                    $('<p>' + item.name + ' <small>' + item.description + '</small></p>')
+                    $('<h3>' + item.name + '<small>' + item.description + '</small></h3>')
                 );
 
                 $jsonFetchingStatusContainer.text('Fetched.');
