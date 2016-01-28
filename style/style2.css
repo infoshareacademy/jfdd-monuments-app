@@ -1,5 +1,4 @@
 body {
-
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 300;
     background-color: #f9f9f9;
@@ -228,4 +227,8 @@ body {
 }
 .partnerzy img {
     height: 26px;
+}
+
+td {
+    font-size: 9px;
 }

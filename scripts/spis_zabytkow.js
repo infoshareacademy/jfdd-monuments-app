@@ -1,7 +1,7 @@
 function listaZabytkowWTablicach() {
     console.log('Trwa skomplikowany proces zaciągania danych :)');
     $.ajax({
-        url: 'data/spis_zabytkow.csv',
+        url: 'data/spis_zabytkow3.csv',
         success: function(csvZabytki) {
             console.log('FETCHED', csvZabytki);
 
@@ -15,15 +15,15 @@ function listaZabytkowWTablicach() {
                 } else {
                     return false;
                 }
-
             });
 
-            console.log(daneZabytkowWaznych);
+            //console.log(daneZabytkowWaznych);
 
+            $("#SpisZabytkowWaznych").append("<table>");
             $.each(daneZabytkowWaznych, function(index, element) {
-                $("#SpisZabytkowWaznych").append("<p>" + element[3] + ", " + element[1] + " " + element[2] + "</p>");
+                $("#SpisZabytkowWaznych").append("<tr><td>" + element[0] + "</td><td>" + element[3] + "</td><td>" + element[1] + "</td><td>" + element[2] + "</td> </tr>");
             });
-
+            $("#SpisZabytkowWaznych").append("</table>");
 
         },
         error: function(err, std) {
