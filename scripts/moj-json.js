@@ -2,31 +2,35 @@
  * Created by lukaszd on 27.01.16.
  */
 
-var MONUMENTS_IDS = {1: 'dworartusa', 2: 'muzeumburszt', 9: 'ratusz'};
+var Monuments_Ids = {666: 'wybierz-zabytek', 0: 'bazylika', 1: 'brama-ducha', 5: 'fontanna', 9: 'ratusz'};
 
 $(function () {
-    var $jsonFetchingStatusContainer = $('#json-fetching-status');
+    var $jsonButtonContainer = $('#json-fetching-status');
 
-    $jsonFetchingStatusContainer.text('Fetching...');
+    $jsonButtonContainer.text('Fetching...');
     $.ajax({
-        url: 'data/dworartusa.json',
+        url: 'data/wybierz-zabytek.json',
         success: function (item) {
 
             $('.targetForJSON').append(
                 $('<h3>' + item.name + '</h3><p>' + item.description + '</p>')
             );
 
-            $jsonFetchingStatusContainer.text('Fetched.');
+            $jsonButtonContainer.text('Fetched.');
         }
     });
 });
 
+$("#selectedMonument").on('change', function (event) {
 
-
+    var selectedMonumentId = $(this).val();
+    console.log('New selected monument id: ' + selectedMonumentId);
+    showMonumentDetails(selectedMonumentId)
+});
 
 function showMonumentDetails(monumentId) {
     $.ajax({
-        url: 'data/' + MONUMENTS_IDS[monumentId] + '.json',
+        url: 'data/' + Monuments_Ids[monumentId] + '.json',
         success: function (item) {
             $('.targetForJSON').html(
                 $('<h3>' + item.name + '</h3><p>' + item.description + '</p>')
