@@ -16,25 +16,25 @@ function showMonumentsWithGeographicalData(data){
     var lat = 54.3485481;
     var lng = 18.6510855;
     var zoom = 14;
-
+var markerInstances;
     var myLatlng = new google.maps.LatLng(lat, lng);
     var myOptions = {
         zoom: zoom,
         center: myLatlng,
         scaleControl: false,
-        //draggable: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map"), myOptions);
 
-    var markerInstances = monumentsWithCords.map(function (monument) {
+    markerInstances = monumentsWithCords.map(function (monument) {
         var image = 'images/blue_MarkerZ.png';
         var myLatLng = new google.maps.LatLng(monument.Dlugosc, monument.Szerokosc);
         var marker = new google.maps.Marker({
             position: myLatLng,
             map: map,
             title: monument.Obiekt,
-            icon: image
+            icon: image,
+            attributes:{ "id":id }
         });
 
         return marker;
@@ -76,5 +76,13 @@ function fetchZabytki() {
 }
 $(document).ready(function() {
     fetchZabytki();
+});
+
+
+/*ON CLICK  na marker pods*/
+markerInstances.addListener(click,function(){
+
+    
+})
 });
 
