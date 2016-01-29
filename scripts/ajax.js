@@ -64,6 +64,7 @@ function showMonumentsWithGeographicalData(data){
             $('#' + id).css({backgroundColor: '#CACACA'});
             showMonumentDetails(id);
 
+            $('select').val(id); //podpina klikniety marker pod buttona
         });
 
          marker.addListener('click', function() {
