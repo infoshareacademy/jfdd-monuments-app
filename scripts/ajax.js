@@ -16,7 +16,7 @@ function showMonumentsWithGeographicalData(data){
     var map;
     var lat = 54.3485481;
     var lng = 18.6510855;
-    var zoom = 14;
+    var zoom = 12;
 
     var myLatlng = new google.maps.LatLng(lat, lng);
     var myOptions = {
@@ -64,8 +64,8 @@ function showMonumentsWithGeographicalData(data){
 
         });
 
-        marker.addListener('click', function() {
-            map.setZoom(20);
+         marker.addListener('click', function() {
+            map.setZoom(12);
             map.setCenter(marker.getPosition());
         });
     });
