@@ -4,6 +4,26 @@
 
 var MONUMENTS_IDS = {1: 'dworartusa', 2: 'muzeumburszt', 9: 'ratusz'};
 
+$(function () {
+    var $jsonFetchingStatusContainer = $('#json-fetching-status');
+
+    $jsonFetchingStatusContainer.text('Fetching...');
+    $.ajax({
+        url: 'data/dworartusa.json',
+        success: function (item) {
+
+            $('.targetForJSON').append(
+                $('<h3>' + item.name + '</h3><p>' + item.description + '</p>')
+            );
+
+            $jsonFetchingStatusContainer.text('Fetched.');
+        }
+    });
+});
+
+
+
+
 function showMonumentDetails(monumentId) {
     $.ajax({
         url: 'data/' + MONUMENTS_IDS[monumentId] + '.json',
