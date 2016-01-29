@@ -167,11 +167,11 @@
 /*LISTA ZACIAGNIETYCH ZABYTKOW */
 
 
-.listaZaciagnietychZabytkow {
+.daneWTabelach {
     text-transform: uppercase;
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 300;
-    font-size: 28px;
+    /*font-size: 30px;*/
     color: #000000;
     margin: 5% 15% 3% 15%;
     padding-bottom: 20px;
@@ -189,7 +189,7 @@
     text-align: center;
     font-size: 50px;
     padding: 20px 0 60px;
-    color: darkred;
+    color: #7e441e;
     font-weight: bolder;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
 }
@@ -197,13 +197,13 @@
 .map{
     height: 800px;
     margin: auto;
-    border: 5px solid darkred;
+    border: 5px solid #7e441e;
 }
 
 /*info o zabytkach*/
 
 .form__info__zabytki {
-    border: solid 5px darkred;
+    border: solid 5px #7e441e;
 	padding: 10px;
 	background: rgba(255,255,255,0.7);
     right:0;
@@ -233,8 +233,11 @@
 }
 
 .dane h4{
-    color: darkred;
+    color: black;
     margin-top:30px;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
 }
 
 #lista {
@@ -248,10 +251,13 @@
 }
 
 #lista tr:nth-child(2n+1) td {
-	background:lightgrey;
+	background: #eeeeee;
 }
 
 .rzeczywisteDane {
+    text-transform: uppercase;
     background-color: white;
     padding: 20px;
+    /*font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;*/
+    /*font-weight: 400;*/
 }
