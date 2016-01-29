@@ -21,8 +21,10 @@ function showMonumentsWithGeographicalData(data){
     var myOptions = {
         zoom: zoom,
         center: myLatlng,
+        navigationControl: false,
+        mapTypeControl: false,
         scaleControl: false,
-        //draggable: false,
+        draggable: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map"), myOptions);
@@ -34,7 +36,13 @@ function showMonumentsWithGeographicalData(data){
             position: myLatLng,
             map: map,
             title: monument.Obiekt,
-            icon: image
+            icon: image,
+            attributes: {'id': monument.lp}
+        });
+
+        marker.addListener('click', function() {
+            console.log("Clicked marker: " + marker);
+            //showMonumentDetails(marker.attributes['id']);
         });
 
         return marker;
@@ -44,7 +52,8 @@ function showMonumentsWithGeographicalData(data){
     //    marker.setMap(map);
     //});
 
-    var markerCluster = new MarkerClusterer(map, markerInstances);
+    var markerClusterer = new MarkerClusterer(map, markerInstances);
+
 
     monumentsWithCords.map(function(monument) {
         var html = '';
@@ -77,4 +86,3 @@ function fetchZabytki() {
 $(document).ready(function() {
     fetchZabytki();
 });
-
