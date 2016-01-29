@@ -26,6 +26,7 @@ function showMonumentsWithGeographicalData(data){
         mapTypeControl: false,
         scaleControl: false,
         draggable: true,
+        scrollwheel: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map"), myOptions);
