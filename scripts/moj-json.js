@@ -21,6 +21,12 @@ $(function () {
     });
 });
 
+var monuments_ID = marker.addListener('click', function() {
+
+
+
+}
+
 function showMonumentDetails(monumentId) {
     $.ajax({
         url: 'data/' + MONUMENTS_IDS[monumentId] + '.json',
