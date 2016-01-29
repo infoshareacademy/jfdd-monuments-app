@@ -65,7 +65,7 @@ function showMonumentsWithGeographicalData(data){
             $('#' + id).css({backgroundColor: '#CACACA'});
             showMonumentDetails(id); //podpina marker pod id
 
-            $('select').val(id); //podpina klikniety marker pod wyświetlanie buttona
+            $('select').val(id); // nasłuchuje po id i podpina klikniety marker pod wyświetlanie buttona
         });
 
          marker.addListener('click', function() {
