@@ -1,6 +1,7 @@
 /**
  * Created by Gosia on 21.01.16.
  */
+var markerInstances;
 function showMonumentsWithGeographicalData(data){
     data = JSON.parse(data);
     console.log(data);
@@ -16,17 +17,20 @@ function showMonumentsWithGeographicalData(data){
     var lat = 54.3485481;
     var lng = 18.6510855;
     var zoom = 14;
-var markerInstances;
+
     var myLatlng = new google.maps.LatLng(lat, lng);
     var myOptions = {
         zoom: zoom,
         center: myLatlng,
-        scaleControl: false,
+        navigationControl: false,
+        mapTypeControl: false,
+        //scaleControl: false,
+        draggable: false,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map"), myOptions);
 
-    markerInstances = monumentsWithCords.map(function (monument) {
+    markerInstances = monumentsWithCords.map(function (monument, index) {
         var image = 'images/blue_MarkerZ.png';
         var myLatLng = new google.maps.LatLng(monument.Dlugosc, monument.Szerokosc);
         var marker = new google.maps.Marker({
@@ -34,7 +38,7 @@ var markerInstances;
             map: map,
             title: monument.Obiekt,
             icon: image,
-            attributes:{ "id":id }
+            attributes:{ id:index }
         });
 
         return marker;
@@ -42,6 +46,22 @@ var markerInstances;
 
     markerInstances.forEach(function (marker) {
         marker.setMap(map);
+    });
+
+    /* ZAZNACZANIE WIERSZY W TABELI */
+    markerInstances.forEach(function (marker) {
+        marker.addListener('click', function () {
+            //console.log(marker);
+            var id = marker.attributes.id;
+
+            $('#' + id).css({backgroundColor: '#CACACA'});
+
+        });
+
+        marker.addListener('click', function() {
+            map.setZoom(14);
+            map.setCenter(marker.getPosition());
+        });
     });
 
 
@@ -52,9 +72,9 @@ var markerInstances;
         html += '<td>' + monument.Ulica + '</td>';
         html += '<td>' + monument.Nr + '</td>';
         return html;
-    }).forEach(function (htmlPart) {
+    }).forEach(function (htmlPart, index) {
         $('.rzeczywisteDane').append(
-            '<tr data-role="Dane z rzeczywistego API">' +
+            '<tr id=' +index + ' data-role="Dane z rzeczywistego API">' +
             htmlPart +
             '</tr>'
         );
@@ -79,10 +99,4 @@ $(document).ready(function() {
 });
 
 
-/*ON CLICK  na marker pods*/
-markerInstances.addListener(click,function(){
-
-    
-})
-});
 
