@@ -1,6 +1,7 @@
 /**
  * Created by Gosia on 21.01.16.
  */
+var markerInstances;
 function showMonumentsWithGeographicalData(data){
     data = JSON.parse(data);
     console.log(data);
@@ -29,7 +30,7 @@ function showMonumentsWithGeographicalData(data){
     };
     map = new google.maps.Map(document.getElementById("map"), myOptions);
 
-    var markerInstances = monumentsWithCords.map(function (monument) {
+    var markerInstances = monumentsWithCords.map(function (monument, index) {
         var image = 'images/blue_MarkerZ.png';
         var myLatLng = new google.maps.LatLng(monument.Dlugosc, monument.Szerokosc);
         var marker = new google.maps.Marker({
@@ -37,7 +38,7 @@ function showMonumentsWithGeographicalData(data){
             map: map,
             title: monument.Obiekt,
             icon: image,
-            attributes: {'id': monument.lp}
+            attributes: {id: index}
         });
 
         marker.addListener('click', function() {
@@ -53,6 +54,22 @@ function showMonumentsWithGeographicalData(data){
     //});
 
     var markerClusterer = new MarkerClusterer(map, markerInstances);
+    /* ZAZNACZANIE WIERSZY W TABELI */
+    markerInstances.forEach(function (marker) {
+        marker.addListener('click', function () {
+            //console.log(marker);
+            var id = marker.attributes.id;
+
+            $('#' + id).css({backgroundColor: '#CACACA'});
+
+        });
+
+        marker.addListener('click', function() {
+            map.setZoom(20);
+            map.setCenter(marker.getPosition());
+        });
+    });
+
 
 
     monumentsWithCords.map(function(monument) {
@@ -61,9 +78,9 @@ function showMonumentsWithGeographicalData(data){
         html += '<td>' + monument.Ulica + '</td>';
         html += '<td>' + monument.Nr + '</td>';
         return html;
-    }).forEach(function (htmlPart) {
+    }).forEach(function (htmlPart, index) {
         $('.rzeczywisteDane').append(
-            '<tr data-role="Dane z rzeczywistego API">' +
+            '<tr id=' +index + ' data-role="Dane z rzeczywistego API">' +
             htmlPart +
             '</tr>'
         );
@@ -86,3 +103,4 @@ function fetchZabytki() {
 $(document).ready(function() {
     fetchZabytki();
 });
+
