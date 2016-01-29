@@ -1,5 +1,4 @@
-body {
-
+﻿body {
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 300;
     background-color: #f9f9f9;
@@ -212,52 +211,13 @@ body {
 
 .form__info__zabytki {
     border: solid 5px darkred;
-    /*padding: 40px 0;*/
-    /*width: 1000px;*/
-    height: 800px;
-    /*position:fixed;*/
-    /*top: 60vh;*/
+	padding: 10px;
+	background: rgba(255,255,255,0.7);
+    // height: 800px;
     right:0;
-    /*bottom: 1000px;*/
-    /*padding:20px;*/
     z-index:10000;
-
-
 }
 
-
-
-/*.form__info__zabytki {*/
-    /*position: fixed;*/
-    /*left: 25vw;*/
-    /*right: 25vw;*/
-    /*top: 30vh;*/
-    /*z-index: 1000;*/
-    /*display: none;*/
-    /*padding: 50px;*/
-    /*background-color: orange;*/
-    /*border-radius: 10px;*/
-    /*color: white;*/
-/*}*/
-/**/
-/*.close__info__zabytki {*/
-    /*background: gray;*/
-    /*padding: 0px 10px 16px;*/
-    /*display: inline-block;*/
-    /*position: absolute;*/
-    /*top: 6px;*/
-    /*right: 6px;*/
-    /*border-radius: 5%;*/
-    /*cursor: pointer;*/
-    /*font-size: 4em;*/
-    /*font-weight: 500;*/
-    /*line-height: 0.5em;*/
-    /*z-index: 1001;*/
-/*}*/
-/**/
-/*.close__info__zabytki {*/
-    /*color: yellow;*/
-/*}*/
 
 .stopka {
 
@@ -282,6 +242,26 @@ body {
 }
 
 .dane h4{
-
     color: darkred;
+    margin-top:30px;
+}
+
+#lista {
+	margin: 20px 0;
+	width: 100%;
+}
+#lista td {
+    font-size: 12px;
+	padding: 2px; 
+}
+#lista tr:nth-child(2n+1) td {
+	background: #ccc;
+
+}
+
+
+.rzeczywisteDane{
+    background-color: white;
+    padding: 20px;
+
 }

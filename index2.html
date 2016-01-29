@@ -11,7 +11,8 @@
     <title>Zabytki Gdańska</title>
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
-    <link href='https://fonts.googleapis.com/css?family=Oswald:700,400,300&subset=latin,latin-ext' rel='stylesheet'
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700,400,300&subset=latin,latin-ext'
+          rel='stylesheet'
           type='text/css'>
 
     <!--<link type="text/css" rel="stylesheet" href="style/reset.css">-->
@@ -84,41 +85,41 @@
 <main class="container-fluid">
     <section class="listaZaciagnietychZabytkow row">
 
-        <h2 class="col-xs-10 col-xs-offset-1"><a name="domapy"></a>Zabytki zaciągnięte z API Gdańska</h2>
+		<div class="col-xs-10 col-xs-offset-1"><a name="domapy"></a>
+			<h2>Obiekty z wpisem do rejestru zabytków:</h2>
+			<div id="SpisZabytkowWaznych"></div>
+			<hr/>
+			<h2>Najważniejsze zabytki Gdańska</h2>
+			<select id="selectedMonument">
+				<option value="1">Dwór Artusa</option>
+				<option value="2">Muzeum Bursztynu</option>
+				<option value="3">Ratusz</option>
+			</select>
 
+		</div>
     </section>
 
-    <section class="row">
+    <section class="mapOfGdansk row">
 
-        <select id="selectedMonument">
-            <option value="1">Dwór Artusa</option>
-            <option value="2">Muzeum Bursztynu</option>
-            <option value="3">Ratusz</option>
-        </select>
-
-        <div class="col-sm-2">
+        <div class="col-md-3">
             <div class="form__info__zabytki">
                 <p class="targetForJSON"></p>
             </div>
 
         </div>
 
-
-        <section class="mapOfGdansk">
-
-            <div class="col-sm-9">
-                <div class="map" id="map"></div>
-                <div class="dane"></div>
-                <h4> RZECZYWISTE DANE GDANSKA</h4>
-                <table class="rzeczywisteDane">
-                    <tr>
-                        <td> NAZWA ZABYTKU</td>
-                        <td> NR </td>
-                        <td> ULICA </td>
-                    </tr>
-                </table>
+        <section class="col-md-9">
+			<div class="map" id="map"></div>
+			<div class="dane container">
+                <h4> DANE Z RZECZYWISTEGO API</h4>
             </div>
-
+			<table class="rzeczywisteDane table table-striped row">
+				<tr>
+					<td class="col-xs-7"> NAZWA ZABYTKU</td>
+					<td class="col-xs-1"> NR </td>
+					<td class="col-xs-4"> ULICA </td>
+				</tr>
+			</table>
         </section>
 
     </section>
@@ -154,12 +155,10 @@
 </footer>
 
 <!-- ponizej pobieramy jQuery z google hosted libraries -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
-<script src="scripts/bootvalidator.js"></script>
-<script src="scripts/menu_move.js"></script>
-<script src="scripts/zaloguj.js"></script>
-
-
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+<!-- <script src="scripts/bootvalidator.js"></script> -->
+<!-- <script src="scripts/menu_move.js"></script> -->
+<!-- <script src="scripts/zaloguj.js"></script> -->
 
 </body>
 </html>

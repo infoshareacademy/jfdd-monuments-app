@@ -1,18 +1,15 @@
 /**
- * Created by gosia on 21.01.16.
+ * Created by Gosia on 21.01.16.
  */
-
 function showMonumentsWithGeographicalData(data){
     data = JSON.parse(data);
     console.log(data);
 
-    //data.sort(function (Obiekt){
-    //    return parseString(ASC).Obiekt;
-    //});
-
-
     var monumentsWithCords = data.filter(function (monument) {
-        return  monument.Dlugosc && monument.Szerokosc && monument.lp;
+        return  monument.Dlugosc && monument.Szerokosc;
+    }).sort(function (a, b){
+
+        return $.trim(a.Obiekt) > $.trim(b.Obiekt) ? 1 : -1;
     });
 
     var map;
@@ -53,6 +50,7 @@ function showMonumentsWithGeographicalData(data){
 
     //markerInstances.forEach(function (marker) {
     //    marker.setMap(map);
+    //});
 
     var markerClusterer = new MarkerClusterer(map, markerInstances);
 
