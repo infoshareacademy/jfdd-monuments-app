@@ -25,7 +25,7 @@ function showMonumentsWithGeographicalData(data){
         navigationControl: false,
         mapTypeControl: false,
         scaleControl: false,
-        draggable: false,
+        draggable: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map"), myOptions);
@@ -65,7 +65,7 @@ function showMonumentsWithGeographicalData(data){
         });
 
          marker.addListener('click', function() {
-            map.setZoom(12);
+            map.setZoom(17);
             map.setCenter(marker.getPosition());
         });
     });
