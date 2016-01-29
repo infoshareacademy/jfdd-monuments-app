@@ -2,7 +2,7 @@
  * Created by lukaszd on 27.01.16.
  */
 
-var Monuments_Ids = {666: 'wybierz-zabytek', 0: 'bazylika', 1: 'brama-ducha', 5: 'fontanna', 9: 'ratusz'};
+var Monuments_Ids = {66: 'wybierz-zabytek', 0: 'bazylika', 1: 'brama-ducha', 2: 'brama-zuraw', 3: 'dom-uphagena', 4:'dlugi-targ', 5: 'fontanna', 6: 'kanal', 7: 'muzeum-arch', 8: 'stoczniowcy', 9: 'ratusz'};
 
 $(function () {
     var $jsonButtonContainer = $('#json-fetching-status');
