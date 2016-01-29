@@ -26,7 +26,7 @@ function showMonumentsWithGeographicalData(data){
         mapTypeControl: false,
         scaleControl: false,
         draggable: true,
-        scrollwheel: false,
+        scrollwheel: true,
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
     map = new google.maps.Map(document.getElementById("map"), myOptions);
@@ -62,12 +62,14 @@ function showMonumentsWithGeographicalData(data){
             var id = marker.attributes.id;
 
             $('#' + id).css({backgroundColor: '#CACACA'});
+            showMonumentDetails(id);
 
         });
 
          marker.addListener('click', function() {
-            map.setZoom(12);
+            map.setZoom(17);
             map.setCenter(marker.getPosition());
+
         });
     });
 
