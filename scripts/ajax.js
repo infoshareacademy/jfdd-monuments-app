@@ -65,7 +65,7 @@ function showMonumentsWithGeographicalData(data){
         });
 
          marker.addListener('click', function() {
-            map.setZoom(17);
+            map.setZoom(12);
             map.setCenter(marker.getPosition());
         });
     });
