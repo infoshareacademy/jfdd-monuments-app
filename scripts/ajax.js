@@ -54,7 +54,8 @@ function showMonumentsWithGeographicalData(data){
     //    marker.setMap(map);
     //});
 
-    var markerClusterer = new MarkerClusterer(map, markerInstances);
+    var markerClusterer = new MarkerClusterer(map, markerInstances); //grupowanie markerów w klastry
+
     /* ZAZNACZANIE WIERSZY W TABELI */
     markerInstances.forEach(function (marker) {
         marker.addListener('click', function () {
@@ -62,7 +63,7 @@ function showMonumentsWithGeographicalData(data){
             var id = marker.attributes.id;
 
             $('#' + id).css({backgroundColor: '#CACACA'});
-            showMonumentDetails(id);
+            showMonumentDetails(id); //podpina marker pod id
 
             $('select').val(id); //podpina klikniety marker pod wyświetlanie buttona
         });

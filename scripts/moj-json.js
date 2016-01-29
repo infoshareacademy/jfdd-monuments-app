@@ -4,6 +4,8 @@
 
 var Monuments_Ids = {66: 'wybierz-zabytek', 0: 'bazylika', 1: 'brama-ducha', 2: 'brama-zuraw', 3: 'dom-uphagena', 4:'dlugi-targ', 5: 'fontanna', 6: 'kanal', 7: 'muzeum-arch', 8: 'stoczniowcy', 9: 'ratusz'};
 
+// funkcja wyświetlająca info o zabytkach poprzez button
+
 $(function () {
     var $jsonButtonContainer = $('#json-fetching-status');
 
@@ -27,6 +29,7 @@ $("#selectedMonument").on('change', function (event) {
     console.log('New selected monument id: ' + selectedMonumentId);
     showMonumentDetails(selectedMonumentId)
 });
+
 
 function showMonumentDetails(monumentId) {
     $.ajax({
