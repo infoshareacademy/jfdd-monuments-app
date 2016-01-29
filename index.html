@@ -12,10 +12,7 @@
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
     <link href='https://fonts.googleapis.com/css?family=Oswald:700,400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <!--<link type="text/css" rel="stylesheet" href="style/reset.css">-->
-    <!--<link type="text/css" rel="stylesheet" href="style/animate.css">-->
     <link type="text/css" rel="stylesheet" href="style/style2.css">
-    <!--<link type="text/css" rel="stylesheet" href="style/easteregg.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -23,6 +20,7 @@
 
 <body>
 <a name="dogory"></a>
+
 <!--NAGLÓWEK-->
 <header class="header">
 
@@ -53,7 +51,7 @@
         </div>
 
         <div class="menu_div_contact menu_div hover_orange">
-            <a href="#contact_id">Kontakt</a>
+            <a href="#dozabytki">Zabytki</a>
         </div>
 
     </div>
@@ -79,14 +77,17 @@
 </aside>
 
 <main class="container-fluid">
-    <section class="listaZaciagnietychZabytkow row">
+    <section class="daneWTabelach table table-striped row">
 
-		<div class="col-xs-10 col-xs-offset-1"><a name="domapy"></a>
-			<h2>Obiekty z wpisem do rejestru zabytków:</h2>
+		<div class="col-xs-10 col-xs-offset-1"><a></a>
+
+            <h2>Obiekty z wpisem do rejestru zabytków:</h2>
 			<div id="SpisZabytkowWaznych"></div>
 			<hr/>
+
 			<h2>Najważniejsze zabytki Gdańska</h2>
-			<select id="selectedMonument">
+
+            <select id="selectedMonument">
 				<option value="1">Dwór Artusa</option>
 				<option value="2">Muzeum Bursztynu</option>
 				<option value="3">Ratusz</option>
@@ -96,7 +97,7 @@
     </section>
 
     <section class="mapOfGdansk row">
-
+        <a name="domapy"></a>
         <div class="col-md-3">
             <div class="form__info__zabytki">
                 <p class="targetForJSON"></p>
@@ -109,12 +110,13 @@
                 <h4> DANE Z RZECZYWISTEGO API</h4>
             </div>
 			<table class="rzeczywisteDane table table-striped row">
-				<tr>
-					<td class="col-xs-7"> NAZWA ZABYTKU</td>
-					<td class="col-xs-1"> NR </td>
-					<td class="col-xs-4"> ULICA </td>
-				</tr>
-			</table>
+                <a name="dozabytki"></a>
+                <tr>
+                    <td class="col-xs-7"> NAZWA ZABYTKU</td>
+                    <td class="col-xs-1"> NR </td>
+                    <td class="col-xs-4"> ULICA </td>
+                </tr>
+            </table>
         </section>
 
     </section>
@@ -139,19 +141,11 @@
 
 <script src="scripts/jquery-2.1.4.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
-<!--<script src="scripts/parallax.js"></script>-->
 <script src="scripts/ajax.js"></script>
 <script src="scripts/csv2jason.js"></script>
-<!--<script src="scripts/info_zabytki.js"></script>-->
 <script src="scripts/moj-json.js"></script>
 <script src="scripts/markerclusterer.js"></script>
 <script src="scripts/spis_zabytkow.js"></script>
-
-<!-- ponizej pobieramy jQuery z google hosted libraries -->
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
-<!-- <script src="scripts/bootvalidator.js"></script> -->
-<!-- <script src="scripts/menu_move.js"></script> -->
-<!-- <script src="scripts/zaloguj.js"></script> -->
 
 </body>
 </html>

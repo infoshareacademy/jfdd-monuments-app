@@ -7,10 +7,8 @@
 .header {
     position: relative;
     background: url("../images/galeriaMuseaPicture4.jpg") no-repeat;
-    /*background-position: 0 -400px;*/
     height: 670px;
     background-size: cover;
-    /*background-attachment: fixed;*/
 }
 
 #logo2 {
@@ -169,13 +167,11 @@
 /*LISTA ZACIAGNIETYCH ZABYTKOW */
 
 
-.listaZaciagnietychZabytkow {
+.daneWTabelach {
     text-transform: uppercase;
-
-    /*height: 250px;*/
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 300;
-    font-size: 28px;
+    /*font-size: 30px;*/
     color: #000000;
     margin: 5% 15% 3% 15%;
     padding-bottom: 20px;
@@ -183,81 +179,38 @@
 
 /*MapOfGdansk*/
 
-
-.mapOfGdansk{
+.mapOfGdansk {
     padding: 40px 0;
     background: url("../images/Vogel-brama-1.jpg ") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
 }
-.mapOfGdansk h2{
+.mapOfGdansk h2 {
     text-align: center;
     font-size: 50px;
     padding: 20px 0 60px;
-    color: darkred;
+    color: #7e441e;
     font-weight: bolder;
     text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
 }
 
 .map{
-    /*width: 800px;*/
     height: 800px;
     margin: auto;
-    border: 5px solid darkred;
-
+    border: 5px solid #7e441e;
 }
 
 /*info o zabytkach*/
 
 .form__info__zabytki {
-    border: solid 5px darkred;
+    border: solid 5px #7e441e;
 	padding: 10px;
 	background: rgba(255,255,255,0.7);
-    /*padding: 40px 0;*/
-    /*width: 1000px;*/
-    // height: 800px;
-    /*position:fixed;*/
-    /*top: 60vh;*/
     right:0;
-    /*bottom: 1000px;*/
-    /*padding:20px;*/
     z-index:10000;
 }
 
-/*.form__info__zabytki {*/
-    /*position: fixed;*/
-    /*left: 25vw;*/
-    /*right: 25vw;*/
-    /*top: 30vh;*/
-    /*z-index: 1000;*/
-    /*display: none;*/
-    /*padding: 50px;*/
-    /*background-color: orange;*/
-    /*border-radius: 10px;*/
-    /*color: white;*/
-/*}*/
-/**/
-/*.close__info__zabytki {*/
-    /*background: gray;*/
-    /*padding: 0px 10px 16px;*/
-    /*display: inline-block;*/
-    /*position: absolute;*/
-    /*top: 6px;*/
-    /*right: 6px;*/
-    /*border-radius: 5%;*/
-    /*cursor: pointer;*/
-    /*font-size: 4em;*/
-    /*font-weight: 500;*/
-    /*line-height: 0.5em;*/
-    /*z-index: 1001;*/
-/*}*/
-/**/
-/*.close__info__zabytki {*/
-    /*color: yellow;*/
-/*}*/
-
 .stopka {
-
     color: white;
     text-transform: uppercase;
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
@@ -274,31 +227,37 @@
     text-align: center;
     padding: 8px 20px;
 }
+
 .partnerzy img {
     height: 26px;
 }
 
 .dane h4{
-    color: darkred;
+    color: black;
     margin-top:30px;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
 }
 
 #lista {
 	margin: 20px 0;
 	width: 100%;
 }
+
 #lista td {
     font-size: 12px;
 	padding: 2px; 
 }
-#lista tr:nth-child(2n+1) td {
-	background: #ccc;
 
+#lista tr:nth-child(2n+1) td {
+	background: #eeeeee;
 }
 
-
-.rzeczywisteDane{
+.rzeczywisteDane {
+    text-transform: uppercase;
     background-color: white;
     padding: 20px;
-
+    /*font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;*/
+    /*font-weight: 400;*/
 }
