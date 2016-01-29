@@ -44,7 +44,7 @@ function showMonumentsWithGeographicalData(data){
         });
 
         marker.addListener('click', function() {
-            console.log("Clicked marker: " + marker)
+            console.log("Clicked marker: " + marker);
             //showMonumentDetails(marker.attributes['id']);
         });
 
@@ -54,7 +54,7 @@ function showMonumentsWithGeographicalData(data){
     //markerInstances.forEach(function (marker) {
     //    marker.setMap(map);
 
-    //var markerCluster = new MarkerClusterer(map, markerInstances);
+    var markerClusterer = new MarkerClusterer(map, markerInstances);
 
 
     monumentsWithCords.map(function(monument) {
