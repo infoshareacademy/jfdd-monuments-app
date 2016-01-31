@@ -271,3 +271,9 @@
     box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
     font-weight: 400;
 }
+
+#opcjeZabytkow, #selectedMonument {
+    font-size: 20px;
+    background: #EEEEEE;
+    box-shadow: 7px 10px 25px -9px rgba(0,0,0,0.4);
+}
