@@ -86,16 +86,14 @@
 
 		<div class="col-xs-10 col-xs-offset-1"><a></a>
 
-            <div id="opcjeZabytkow">
-                <div>
-                    [cmentarze]
-                    [domy]
-                    [kamienice]
-                    [kościoły]
-                    [obiekty z wpisem do rejestru]
-                    [wiadukty]
-                </div>
-            </div>
+            <select id="opcjeZabytkow">
+                <option value="wszystkie">wszystkie</option>
+                <option value="cmentarze">cmentarze</option>
+                <option value="domy">domy</option>
+                <option value="kamien">kamienice</option>
+                <option value="koscioly">kościoły</option>
+                <option value="wiadukty">wiadukty</option>
+            </select>
 
             <h2>Obiekty z wpisem do rejestru zabytków:</h2>
 
@@ -134,7 +132,7 @@
 			<div class="dane container">
                 <h4> DANE Z RZECZYWISTEGO API</h4>
             </div>
-			<table class="rzeczywisteDane table table-striped row">
+			<table class="rzeczywisteDane table table-striped">
                 <a name="dozabytki"></a>
                 <tr>
                     <td class="col-xs-7"> NAZWA ZABYTKU</td>
@@ -154,7 +152,7 @@
 
 <!--FOOTER -->
 <footer>
-    <div class="stopka">Copyright 2015 | All Rights Reserved - Wunder Team</div>
+    <div class="stopka">Copyright 2016 | All Rights Reserved - Wunder Team</div>
     <div class="partnerzy">
         <img src="images/stopka_olivia_center.jpg" alt="Olivia Center logo">
         <img src="images/stopka_Wteam2.jpg" alt="WunderTeam logo">
