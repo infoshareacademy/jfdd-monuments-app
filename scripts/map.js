@@ -44,6 +44,7 @@ function initialize()
 
     var marker = new google.maps.Marker({
         position: myCenter,
+        scrollwheel: false,
         title:'Click to zoom'
     });
 
