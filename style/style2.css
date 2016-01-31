@@ -247,17 +247,17 @@
     font-size: 32px;
 }
 
-#lista {
+.listaZabytkowWgTypu table {
 	margin: 20px 0;
 	width: 100%;
 }
 
-#lista td {
+.listaZabytkowWgTypu td {
     font-size: 12px;
 	padding: 2px; 
 }
 
-#lista tr:nth-child(2n+1) td {
+.listaZabytkowWgTypu tr:nth-child(2n+1) td {
 	background: #eeeeee;
 }
 
@@ -272,7 +272,7 @@
     font-weight: 400;
 }
 
-#opcjeZabytkow, #selectedMonument {
+#opcjeZabytkow, #selectedMonument, #typyZabytkow {
     font-size: 20px;
     background: #EEEEEE;
     box-shadow: 7px 10px 25px -9px rgba(0,0,0,0.4);
