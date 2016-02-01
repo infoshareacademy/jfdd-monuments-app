@@ -86,18 +86,39 @@
 
 		<div class="col-xs-10 col-xs-offset-1"><a></a>
 
-            <select id="opcjeZabytkow">
-                <option value="wszystkie">wszystkie</option>
-                <option value="cmentarze">cmentarze</option>
-                <option value="domy">domy</option>
-                <option value="kamien">kamienice</option>
-                <option value="koscioly">kościoły</option>
-                <option value="wiadukty">wiadukty</option>
+            <select id="typyZabytkow">
+                <option value="SpisZabytkowRejestr">obiekty z wpisem do rejestru zabytków</option>
+                <option value="SpisZabytkowCmentarze">cmentarze</option>
+                <option value="SpisZabytkowDomy">domy</option>
+                <option value="SpisZbaytkowKamienice">kamienice</option>
+                <option value="SpisZabytkowKoscioly">kościoły</option>
+                <option value="SpisZabytkowWiadukty">wiadukty</option>
             </select>
 
-            <h2>Obiekty z wpisem do rejestru zabytków:</h2>
 
-			<div id="SpisZabytkowWaznych"></div>
+			<div id="SpisZabytkowRejestr" class="listaZabytkowWgTypu">
+                <h2>Obiekty z wpisem do rejestru zabytków:</h2>
+            </div>
+
+
+            <div id="SpisZabytkowCmentarze" class="hidden listaZabytkowWgTypu">
+                <h2>Cmentarze:</h2>
+            </div>
+
+            <div id="SpisZabytkowDomy" class="hidden listaZabytkowWgTypu">
+                <h2>Domy:</h2>
+            </div>
+
+
+            <div id="SpisZabytkowKoscioly" class="hidden listaZabytkowWgTypu">
+                <h2>Koscioly:</h2>
+            </div>
+
+
+            <div id="SpisZabytkowWiadukty" class="hidden listaZabytkowWgTypu">
+                <h2>Wiadukty:</h2>
+            </div>
+
 			<hr/>
 
 			<h2>Najważniejsze zabytki Gdańska</h2>
@@ -130,7 +151,7 @@
 
         <section class="col-md-9">
 			<div class="map" id="map"></div>
-			<div class="dane container">
+			<div class="dane">
                 <h4> DANE Z RZECZYWISTEGO API</h4>
             </div>
 			<table class="rzeczywisteDane table table-striped">
