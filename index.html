@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="pl">
+<html lang="pl" ng-app="zabytki">
 <head>
 
     <meta charset="utf-8">
@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body ng-controller="zabytkiCtrl">
 <a name="dogory"></a>
 
 <!--NAGLÓWEK-->
@@ -47,16 +47,8 @@
 <nav class="menu_gl">
     <div>
 
-        <div class="menu_div_header menu_div hover_orange">
-            <a href="#dogory">Główna</a>
-        </div>
-
-        <div class="menu_div_feat menu_div hover_orange">
-            <a href="#domapy">Mapa</a>
-        </div>
-
-        <div class="menu_div_contact menu_div hover_orange">
-            <a href="#dozabytki">Zabytki</a>
+        <div ng-repeat="site in sites" class="menu_div_header menu_div hover_orange">
+            <a ng-href="{{site.href}}">{{site.name}}</a>
         </div>
 
     </div>
@@ -123,19 +115,8 @@
 
 			<h2>Najważniejsze zabytki Gdańska</h2>
 
-            <select id="selectedMonument">
-                <option value="66">Wybierz Zabytek</option>
-                <option value="0">Bazylika Mariacka</option>
-                <option value="1">Brama Wyżynna</option>
-                <option value="2">Brama Św. Ducha</option>
-                <option value="3">Dom Uphagena</option>
-                <option value="4">Kanał na Stępce</option>
-                <option value="5">Muzeum Narodowe</option>
-                <option value="6">Pomnik Poległych Stoczniowców</option>
-                <option value="7">Ratusz Głównego Miasta</option>
-				<option value="8">Reduta Biskupiej Górki</option>
-				<option value="9">Westerplatte</option>
-				<option value="10">Wyspa Spichrzów</option>
+            <select id="selectedMonument" ng-click="zabytkiCtrl" ng-repeat="monuments in zabytkiCtrl | orderBy:zabytkiCtrl:id" option value={{zabytkiCtrl}}>
+                <!--<option>aaa</option>-->
 			</select>
 
 		</div>
@@ -185,6 +166,8 @@
 </footer>
 
 <script src="scripts/jquery-2.1.4.min.js"></script>
+<script src="scripts/angular.js"></script>
+<script src="scripts/angularapp.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="scripts/markerclusterer.js"></script>
 <script src="scripts/ajax.js"></script>

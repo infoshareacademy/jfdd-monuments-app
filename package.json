@@ -1,0 +1,24 @@
+{
+  "name": "materialy-angular_node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/infoshareacademy/materialy-angular_node.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/infoshareacademy/materialy-angular_node/issues"
+  },
+  "dependencies": {
+    "bower-sync": "^0.1.0",
+    "browser-sync": "^2.11.1"
+  },
+  "homepage": "https://github.com/infoshareacademy/materialy-angular_node#readme"
+}
