@@ -12,12 +12,16 @@
             {name: 'Zaplanuj wycieczkę', href: '#zaplanujwycieczke'},
             {name: 'Zabytki z wpisem do rej.', href: '#zabytkizwpisemdorej'}
         ];
+        $scope.selectMonument = selectMonument;
+
+        function selectMonument(monument) {
+            $scope.monument = monument;
+        }
 
         $http.get('../data/zabytki.json').then(function (response) {
-            $scope.monuments = response.data
+            $scope.monuments = response.data;
+            $scope.monument = response.data[0];
         });
 
-    }).controller('', function ($scope) {
-        $scope.zabytkiCtrl = zabytkiCtrl;
     });
 })();

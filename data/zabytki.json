@@ -6,46 +6,59 @@
   },
   {
     "name": "Bazylika Mariacka",
-    "id": "0"
+    "id": "0",
+    "description": "Bazylika konkatedralna Wniebowzięcia Najświętszej Maryi Panny w Gdańsku, kościół Mariacki – historyczna fara Głównego Miasta w Gdańsku, pełniąca funkcję kościoła katolickiego i ewangelickiego (w latach 1572-1945), od 1986 konkatedra diecezji gdańskiej, która w 1992 stała się archidiecezją. Kościół jest dedykowany Najświętszej Marii Panny, nosi wezwanie Wniebowzięcia NMP. Położony jest na placu między ulicami Piwną i Chlebnicką, a Św. Ducha. Od strony Motławy bezpośrednio do jednej z bram świątyni prowadzi ul. Mariacka. Kościół Mariacki jest największą świątynią na świecie zbudowaną z cegły[2]. Jej charakterystyczna sylwetka, której akcentami są masywna zachodnia wieża dzwonna i smukłe narożne wieżyczki tworzy dominantę w panoramie miasta. Zbudowany w latach 1346-1506 kościół jest przykładem gotyku ceglanego, odmiany stylu w architekturze gotyckiej upowszechnionego w krajach basenu Morza Bałtyckiego. Pomimo burzliwych dziejów, świątynia zachowała historyczną formę architektoniczną co poświadcza ikonografia sięgająca XVI wieku oraz bogaty wystrój wnętrza, który tworzą liczne dzieła średniowieczne (m.in. Piękna Madonna Gdańska, Pietà, Ołtarz Koronacji Marii, ołtarz Św. Barbary, Tablica Dziesięciorga Przykazań, zegar astronomiczny) i nowożytne (zespół obrazów i epitafiów z XVI-XVIII stuleci)."
   },
   {
     "name": "Brama Wyżynna",
-    "id": "1"
+    "id": "1",
+    "description": "Brama Wyżynna – renesansowa brama miejska w Gdańsku, obecnie przy głównej trasie samochodowej (ulice Okopowa i Wały Jagiellońskie). Do 1895 znajdowała się w ciągu szesnastowiecznych fortyfikacji, pomiędzy Bastionem św. Elżbiety i Bastionem Karowym oraz stanowiła główną bramę wjazdową do miasta, otwierającą ciąg tzw. Drogi Królewskiej."
   },
   {
     "name": "Brama Św. Ducha",
-    "id": "2"
+    "id": "2",
+    "description" : "Brama Świętego Ducha– zabytkowa, jedna z bram wodnych w Gdańsku. Znajduje się u wylotu ul. św. Ducha, na Długim Pobrzeżu. Brama ta istniała już w 1378 roku. Znana była wtedy jako brama „dolna”. W połowie XV wieku uzyskała kształt znany z zaginionego obrazu Antoniego Möllera z 1603 roku. Fasadę zdobiła podwójna wnęka i ażurowa attyka, usunięta w XIX wieku. W XVI wieku brama utraciła charakter militarny i została zaadoptowana na mieszkania oraz warsztaty. Ostateczne zatracenie historycznej formy spowodowały przebudowy w XIX wieku. Po II wojnie światowej z bramy pozostał tylko łuk przejścia i strzępy ścian. Odbudowa rozpoczęła się dopiero w pierwszej połowie lat 80. XX wieku. Brama nie jest rekonstrukcją, ale stanowi przykład reintegracji architektonicznej zespołu gdańskich historycznych bram wodnych. Odbudowaną bramę zdobi sgrafittowy fryz. Naprzeciw bramy, po drugiej stronie Motławy, zaczyna się Wyspa Spichrzów."
   },
   {
     "name": "Dom Uphagen",
-    "id": "3"
+    "id": "3",
+    "description": "Dom Uphagena – gdańska kamienica, powstała w latach 70. i 80. XVIII wieku jako siedziba rajcy gdańskiego Jana Uphagena. Uphagen wprowadził się do niej 16 października 1779 o godz. 18:00, opuszczając zarazem swoje dotychczasowe mieszkanie w Starym Domu Ławy przy Długim Targu 45. Wykańczanie i wyposażanie obiektu trwało jednak jeszcze wiele lat, tak, że pierwsze przyjęcie w salonie odbyło się dopiero 24 stycznia 1787. Uphagen żył w niej do swojej śmierci w 1802 roku. Następnie przez cały XIX wiek kamienica należała do jego rodziny."
+
   },
   {
     "name": "Kanał na Stępce",
-    "id": "4"
+    "id": "4",
+    "description" : "Kanał na Stępce – kanał w Gdańsku o długości 600 metrów. Opływa wyspę Ołowiankę od wschodu. Od południa kanał rozpoczyna się na wodach Nowej Motławy. Nad wejściem do niego znajduje się Most Kamieniarski. Uchodzi pod drugim mostem do Starej Motławy, w pobliżu jej końcowego nurtu. Wzdłuż kanału biegnie ulica Na Stępce. Jego południowy wlot zlokalizowany jest przy gdańskiej marinie. W 1576 został wykopany Kanał Ciesielski (Zimmermacher Graben, 1595), zwany też Stępkarskim (Kielgraben, od warsztatów szkutniczych), obecnie zwany Kanałem na Stępce, który oddzielił od pozostałej części dawnej Szafarni Ołowiankę i utworzył z niej wyspę."
   },
   {
     "name": "Muzeum Narodowe",
-    "id": "5"
+    "id": "5",
+    "description" : "Muzeum Narodowe w Gdańsku – wielooddziałowa instytucja kultury, powstała w 1972. Jego siedziba – zabytkowy gmach dawnego klasztoru franciszkańskiego z późnego gotyku, wykorzystywana była do celów ekspozycyjnych od 3 ćw. XIX wieku. Znajdowało się tam wówczas Stadtmuseum, gromadzące sztukę dawną. W 1884 jego kolekcję uzupełniły zbiory gdańskiego Kunstgewerbemuseum, z którym się połączyło. Po II wojnie światowej, muzeum przyjęło polską nazwę Muzeum Pomorskiego w Gdańsku. Pierwotnie znajdowało się w Pałacu Opatów w Gdańsku Oliwie, który pełnił początkowo funkcje działu etnograficznego muzeum. Od 1989 roku mieści się tu Oddział Sztuki Współczesnej Muzeum Narodowego w Gdańsku."
+
   },
   {
     "name": "Pomnik Poległych Stoczniowców",
-    "id": "6"
+    "id": "6",
+    "description" : "Pomnik Poległych Stoczniowców 1970 – monument w postaci trzech krzyży z kotwicami, upamiętniający ofiary grudnia 1970 roku i znajdujący się na Placu Solidarności w Gdańsku, w pobliżu Bramy nr 2 Stoczni Gdańskiej, niedaleko miejsca, gdzie padli pierwsi czterej zabici. Został odsłonięty 16 grudnia 1980 roku."
   },
   {
     "name": "Ratusz Głównego Miasta",
-    "id": "7"
+    "id": "7",
+    "description": "Ratusz Głównego Miasta to gotycko-renesansowa budowla, usytuowana na styku ulicy Długiej i Długiego Targu. Jej sylwetka dominuje nad panoramą Drogi Królewskiej, najbardziej reprezentacyjnego traktu zabytkowej części miasta. Początki Ratusza sięgają wczesnego średniowiecza. Był siedzibą władz najważniejszego obszaru Gdańska, nazywanego od XIV w. Głównym Miastem. Od połowy XV w. stał się centrum władzy dla całej nadmotławskiej aglomeracji. Dokładna data powstania budowli nie jest znana. Powstanie pierwszego, murowanego i jednopiętrowego obiektu można datować na I poł. XIV w. Został on rozbudowany przez mistrza murarskiego Heinricha Ungeradina w latach 1379-82. Ogólny rozwój miasta skutkował kolejnymi przebudowami Ratusza w XV i XVI w. W dotychczasowych gabarytach nie mógł on już spełniać swoich rozmaitych funkcji: urzędowali w nim burmistrzowie i obradowała Rada Miasta i Ława, wyrokował sąd nazywany Wetowym, miał swą siedzibę burgrabia, będący reprezentantem króla polskiego w mieście i zbierał się tzw. Trzeci Ordynek."
   },
   {
     "name": "Reduta Biskupiej Górki",
-    "id": "8"
+    "id": "8",
+    "description" : "Reduta Koszarowa – zbudowana w latach 1828–1833 na miejscu dawnego Szańca Szwedzkiego, w nawiązaniu do niezrealizowanych planów francuskich z lat 1811–1812. Wystrój architektoniczny budowli (w stylu klasycystycznym) zatwierdzany był przez Karla Friedricha Schinkla. Jest to założenie na planie trapezu, z trzema skrzydłami kazamatowych koszar z bomboodpornym stropem, pierwotnie otoczone od zewnątrz fosą flankowaną przez dwie kaponiery oraz osłonięte drogą krytą i stokiem. Główny budynek koszarowy ma trzy kondygnacje, przy czym pierwotnie w skrzydle środkowym było o jedną kondygnację więcej, ale rozebrano ją podczas remontu w latach 1873–1875. Od strony wschodniej (skarpy, zwróconej w kierunku miasta) redutę zamyka mur obronny, przerwany dwiema bramami, przed którymi dawniej znajdowały się mosty zwodzone. W połowie długości muru stoi budynek oficerski. Naprzeciw południowej bramy znajduje się wejście do podziemnej klatki schodowej (obecnie nieczynnej), prowadzącej do stóp wzniesienia. Obecnie obiekt jest siedzibą Gdańskiej Wyższej Szkoły Humanistycznej."
   },
   {
     "name": "Westerplatte",
-    "id": "9"
+    "id": "9",
+    "description" : "Westerplatte – uformowany w latach 1845-47 półwysep (wcześniej wyspa) w Gdańsku, przy ujściu Martwej Wisły do Zatoki Gdańskiej. W latach 1926-1939 eksklawa Rzeczypospolitej Polskiej na obszarze Wolnego Miasta Gdańska, symbol wybuchu II wojny światowej. W okresie tym na terenie Westerplatte funkcjonowała Wojskowa Składnica Tranzytowa, której obrona we wrześniu 1939 stała się symbolicznym początkiem II wojny światowej oraz polskiego oporu przeciw agresji niemieckiej. Miejsca związane z polem bitwy o Westerplatte zostały wpisane 1 września 2003 roku na listę Pomników historii."
   },
   {
     "name": "Wyspa Spichrzów",
-    "id": "10"
+    "id": "10",
+    "description" : "Wyspa Spichrzów – wyspa w Gdańsku na rzece Motławie, położona w dzielnicy Śródmieście. Wyspa jest położona pomiędzy Motławą a jej przekopem – Nową Motławą. Leży w centrum Śródmieścia, od wschodu połączona z Długimi Ogrodami poprzez Most Stągiewny, od południa ze Starym Przedmieściem, od zachodu poprzez Most Krowi i Most Zielony z Głównym Miastem. Ponadto przez jej środek przebiega Trasa W-Z. Od północy wyspa sąsiaduje z wyspą Ołowianką. Dodatkowo południowa część wyspy, na której składowano niegdyś towary łatwopalne, została odcięta od głównej części wyspy poprzez powstały sztucznie Kanał Smolny (na północ od ul. Toruńskiej)."
   }
 ]

@@ -24,7 +24,7 @@
 </head>
 
 <body ng-controller="zabytkiCtrl">
-<a name="dogory"></a>
+    <a name="dogory"></a>
 
 <!--NAGLÓWEK-->
 <header class="header">
@@ -54,7 +54,7 @@
     </div>
 </nav>
 
-<!-- SOCIAL MEDIA-->
+<!-- *********************** SOCIAL MEDIA *************************************** -->
 <aside class="social-media animated fadeInRight">
     <div class="social-media__link social-media__link--fb">
         <a href="https://www.facebook.com/Zabytki-Gdańska-778686898924776" target="_blank">
@@ -73,6 +73,9 @@
     </div>
 </aside>
 
+
+<!--************************* DESCRIPTION + MAP ******************************-->
+
 <main class="container-fluid">
     <section class="daneWTabelach table table-striped row">
 
@@ -81,18 +84,17 @@
 
 			<h2>Najważniejsze zabytki Gdańska</h2>
 
-            <select id="selectedMonument" ng-click="zabytkiCtrl" >
-                <option ng-repeat="monument in monuments"  >{{monument.name}}</option>
+            <select ng-model="monument">
+                <option ng-repeat="monument in monuments">{{monument.name}}</option>
 			</select>
-
 		</div>
     </section>
 
     <section class="mapOfGdansk row">
-        <a name="domapy"></a>
+        <a name="domapy">{{monument.name}}</a>
         <div class="col-md-3">
             <div class="form__info__zabytki">
-                <p class="targetForJSON"></p>
+                {{monument.description}}
             </div>
         </div>
 
@@ -114,7 +116,8 @@
     </section>
 
 
-    <!--***** ZABYTKI Z WPISEM DO REJ. ******-->
+<!--*************************** ZABYTKI Z WPISEM DO REJ. ***************************-->
+
     <section class="daneWTabelach table table-striped row">
 
         <div class="col-xs-10 col-xs-offset-1"><a></a>
@@ -156,16 +159,11 @@
 
     </section>
 
-
-
-
-
-
-
 </main>
 
 
-<!--FOOTER -->
+<!--********************************** FOOTER ****************************************-->
+
 <footer>
     <div class="stopka">Copyright 2016 | All Rights Reserved - Wunder Team</div>
     <div class="partnerzy">
