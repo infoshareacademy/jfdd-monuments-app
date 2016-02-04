@@ -115,8 +115,8 @@
 
 			<h2>Najważniejsze zabytki Gdańska</h2>
 
-            <select id="selectedMonument" ng-click="zabytkiCtrl" ng-repeat="monuments in zabytkiCtrl | orderBy:zabytkiCtrl:id" option value={{zabytkiCtrl}}>
-                <!--<option>aaa</option>-->
+            <select id="selectedMonument" ng-click="zabytkiCtrl" >
+                <option ng-repeat="monument in monuments" >{{monument.name}}</option>
 			</select>
 
 		</div>

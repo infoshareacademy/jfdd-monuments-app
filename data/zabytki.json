@@ -1,0 +1,50 @@
+[
+  {
+    "name": "Wybierz Zabytek",
+    "id": 66
+  },
+  {
+    "name": "Bazylika Mariacka",
+    "id": "0"
+  },
+  {
+    "name": "Brama Wyżynna",
+    "id": "1"
+  },
+  {
+    "name": "Brama Św. Ducha",
+    "id": "2"
+  },
+  {
+    "name": "Dom Uphagen",
+    "id": "3"
+  },
+  {
+    "name": "Kanał na Stępce",
+    "id": "4"
+  },
+  {
+    "name": "Muzeum Narodowe",
+    "id": "5"
+  },
+  {
+    "name": "Pomnik Poległych Stoczniowców",
+    "id": "6"
+  },
+  {
+    "name": "Ratusz Głównego Miasta",
+    "id": "7"
+  },
+  {
+    "name": "Reduta Biskupiej Górki",
+    "id": "8"
+  },
+  {
+    "name": "Westerplatte",
+    "id": "9"
+  },
+  {
+    "name": "Wyspa Spichrzów",
+    "id": "10"
+  }
+]
