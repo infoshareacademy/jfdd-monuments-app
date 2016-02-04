@@ -10,7 +10,8 @@
             {name: 'Glowna', href: '#dogory'},
             {name: 'Mapa', href: '#domapy'},
             {name: 'Zabytki', href: '#dozabytki'},
-            {name: 'Footer', href: '#dofootera'}
+            {name: 'Zaplanuj wycieczkę', href: '#zaplanujwycieczke'},
+            {name: 'Zabytki z wpisem do rej.', href: '#zabytkizwpisemdorej'}
         ];
 
         $http.get('../data/zabytki.json').then(function (response) {

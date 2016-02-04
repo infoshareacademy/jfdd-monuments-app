@@ -1,7 +1,8 @@
 [
   {
     "name": "Wybierz Zabytek",
-    "id": 66
+    "id": 66,
+    "description": "opis"
   },
   {
     "name": "Bazylika Mariacka",
