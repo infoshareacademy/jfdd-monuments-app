@@ -9,7 +9,6 @@
         $scope.sites = [
             {name: 'Glowna', href: '#dogory'},
             {name: 'Mapa', href: '#domapy'},
-            {name: 'Zabytki', href: '#dozabytki'},
             {name: 'Zaplanuj wycieczkę', href: '#zaplanujwycieczke'},
             {name: 'Zabytki z wpisem do rej.', href: '#zabytkizwpisemdorej'}
         ];
