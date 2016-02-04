@@ -284,11 +284,10 @@
     position:absolute;
     border-radius:0 0 10px 10px;
     text-align: center;
-    width:80px;
-    height:20px;
+    padding: 7px 20px;
     background-color: #D2E0E6;
     right: 40px;
-    top: 4px;
+    top: 3px;
     z-index:1100;
     opacity: 0.5;
 }
@@ -297,4 +296,6 @@
     opacity: 1;
     color: orange;
     background-color: darkgrey;
+    cursor: pointer;
+    /*cursor: hand;*/
 }
