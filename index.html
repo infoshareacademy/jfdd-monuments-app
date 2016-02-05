@@ -23,7 +23,7 @@
 
 </head>
 
-<body>
+<body ng-app="">
 <a name="dogory"></a>
 
 <!--NAGLÓWEK-->
@@ -165,7 +165,23 @@
         </section>
 
     </section>
-
+<div ng-controller="Ctrl">
+    <ul dnd-list="list">
+        <!-- The dnd-draggable directive makes an element draggable and will
+             transfer the object that was assigned to it. If an element was
+             dragged away, you have to remove it from the original list
+             yourself using the dnd-moved attribute -->
+        <li ng-repeat="item in list"
+            dnd-draggable="item"
+            dnd-moved="list.splice($index, 1)"
+            dnd-effect-allowed="move"
+            dnd-selected="models.selected = item"
+            ng-class="{'selected': models.selected === item}"
+        >
+            {{item.label}}
+        </li>
+    </ul>
+</div>
 
     <!--*****info o zabytkach ******-->
 
@@ -191,6 +207,10 @@
 <script src="scripts/csv2jason.js"></script>
 <script src="scripts/moj-json.js"></script>
 <script src="scripts/spis_zabytkow.js"></script>
+<script src="scripts/favourites.js"></script>
+<script src="scripts/angular.js"></script>
+<script src="scripts/bootstrap.js"></script>
+<script src="scripts/jquery.js"></script>
 
 </body>
 </html>
