@@ -1,0 +1,279 @@
+﻿body {
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 300;
+    background-color: #f9f9f9;
+}
+
+.header {
+    position: relative;
+    background: url("../images/galeriaMuseaPicture4.jpg") no-repeat;
+    height: 670px;
+    background-size: cover;
+}
+
+#logo2 {
+    opacity: 0.65;
+    position: absolute;
+    left: 80px;
+    bottom: 61px;
+    width: 210px;
+    height: 330px;
+    z-index: 100;
+    box-shadow: black 4px 0 5px;
+}
+
+.motto {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 700;
+    position: absolute;
+    left: 330px;
+    bottom: 60px;
+    text-shadow: black 2px 4px 0;
+    font-size: 70px;
+    z-index: 101;
+}
+
+.motto__gdansk, .motto__miasto {
+    display: block;
+}
+
+.motto__miasto {
+    font-size: 50px;
+    margin-top: 15px;
+    margin-left: 80px;
+}
+
+@media screen and (max-width: 600px){
+    #logo2 {
+        display: none;
+    }
+    .motto {
+        font-size: 40px;
+        left: 40px;
+    }
+    .motto__miasto {
+        font-size: 30px;
+
+        margin-left: 20px;
+    }
+    .header {
+        height: 335px;
+    }
+}
+
+
+/*MENU*/
+
+.menu_gl {
+    top: 0;
+    right: 0;
+    position: fixed;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    background-color: #000000;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    z-index: 102;
+    opacity: 0.8;
+    border-left: white 2px solid;
+    border-bottom: white 2px solid;
+    box-shadow: 10px 5px 5px 1px #000;
+}
+
+.menu_div {
+    display: inline;
+    font-size: 25px;
+    padding: 10px;
+}
+
+.menu_div_header {
+    padding-left: 25px;
+}
+
+.menu_div_contact {
+    padding-right: 25px;
+}
+
+/* MENU Hover*/
+
+.hover_orange a{
+    text-decoration: none;
+    color: white;
+}
+
+.hover_orange a:hover {
+    color: orange;
+    /*border-bottom: 2px orange solid;*/
+    text-decoration: none;
+}
+
+.hover_js a {
+    color: sandybrown;
+}
+
+/*ASIDE SOCIAL MEDIA*/
+.social-media {
+    width: 40px;
+    position: fixed;
+    right: 0;
+    top: 50vh;
+    z-index: 1200;
+}
+
+.social-media__link {
+    position: absolute;
+    right: 0;
+}
+
+.social-media__link--fb {
+    top: -63px;
+}
+
+.social-media__link--gp {
+    top: -20px;
+}
+
+.social-media__link--tw {
+    top: 23px;
+}
+
+.social-media__link img {
+    width: 40px;
+}
+
+.social-media__link--fb:hover {
+    width: 55px;
+    height: 40px;
+    background-color: #346da6;
+    border-radius: 5%;
+}
+
+.social-media__link--gp:hover {
+    width: 55px;
+    height: 40px;
+    background-color: #ca4738;
+    border-radius: 5%;
+}
+
+.social-media__link--tw:hover {
+    width: 55px;
+    height: 40px;
+    background-color: #4186cd;
+    border-radius: 5%;
+}
+/*LISTA ZACIAGNIETYCH ZABYTKOW */
+
+
+.daneWTabelach {
+    text-transform: uppercase;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 300;
+    /*font-size: 30px;*/
+    color: #000000;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+
+/*MapOfGdansk*/
+
+.mapOfGdansk {
+    padding: 40px 0;
+    background: url("../images/Vogel-brama-1.jpg ") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.mapOfGdansk h2 {
+    text-align: center;
+    font-size: 50px;
+    padding: 20px 0 60px;
+    color: #7e441e;
+    font-weight: bolder;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+.map{
+    height: 800px;
+    margin: auto;
+    border: 3px solid grey;
+    box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
+}
+
+/*info o zabytkach*/
+
+.form__info__zabytki {
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+    border: solid 3px grey;
+	padding: 10px;
+	background: rgba(255,255,255,0.7);
+    right:0;
+    z-index:10000;
+    box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
+    font-weight: 400;
+}
+
+
+.stopka {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    background: url(../images/naglowek_gdansk1.jpg);
+    /* padding zamiast height na sztywno ponieważ tak się wysokość dostosuje do zawartości gdyby zawartość miała się zmienić */
+    padding: 20px;
+    text-align: center;
+    text-shadow: black 0 2px 0;
+}
+
+.partnerzy {
+    text-align: center;
+    padding: 8px 20px;
+}
+
+.partnerzy img {
+    height: 26px;
+}
+
+.dane h4{
+    color: black;
+    margin: 30px 0;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 32px;
+}
+
+.listaZabytkowWgTypu table {
+	margin: 20px 0;
+	width: 100%;
+}
+
+.listaZabytkowWgTypu td {
+    font-size: 12px;
+	padding: 2px; 
+}
+
+.listaZabytkowWgTypu tr:nth-child(2n+1) td {
+	background: #eeeeee;
+}
+
+.rzeczywisteDane {
+    text-transform: uppercase;
+    background-color: white;
+    padding: 20px;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 400;
+    border: 3px solid grey;
+    box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
+    font-weight: 400;
+}
+
+#opcjeZabytkow, #selectedMonument, #typyZabytkow {
+    font-size: 20px;
+    background: #EEEEEE;
+    box-shadow: 7px 10px 25px -9px rgba(0,0,0,0.4);
+}

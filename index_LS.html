@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html lang="pl">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <meta name="description" content="Zabytki Gdańska">
+    <meta name="author" content="Wunder Team">
+    <meta name="keywords" content="zabytki, gdansk">
+    <title>Zabytki Gdańska</title>
+
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700,400,300&subset=latin,latin-ext'
+          rel='stylesheet'
+          type='text/css'>
+
+    <!--<link type="text/css" rel="stylesheet" href="style/reset.css">-->
+    <!--<link type="text/css" rel="stylesheet" href="style/animate.css">-->
+    <link type="text/css" rel="stylesheet" href="style/style2.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+</head>
+
+<body>
+<a name="dogory"></a>
+
+<!--NAGLÓWEK-->
+<header class="header">
+
+    <img id="logo2" src="images\obraz_1196.jpg">
+
+    <!--MOTTO GDANSK-->
+    <h1 class="motto">
+        <span class="motto__gdansk animated fadeInDown">
+            Gdańsk,
+        </span>
+        <span class="motto__miasto animated fadeInLeft">
+            miasto które chcesz poznać
+        </span>
+    </h1>
+</header>
+
+
+<!--MENU-->
+<nav class="menu_gl">
+    <div>
+
+        <div class="menu_div_header menu_div hover_orange">
+            <a href="#dogory">Główna</a>
+        </div>
+
+        <div class="menu_div_feat menu_div hover_orange">
+            <a href="#domapy">Mapa</a>
+        </div>
+
+        <div class="menu_div_contact menu_div hover_orange">
+            <a href="#dozabytki">Zabytki</a>
+        </div>
+
+    </div>
+</nav>
+
+<!-- SOCIAL MEDIA-->
+<aside class="social-media animated fadeInRight">
+    <div class="social-media__link social-media__link--fb">
+        <a href="https://www.facebook.com/Zabytki-Gdańska-778686898924776" target="_blank">
+            <img src="images/social_facebook.png">
+        </a>
+    </div>
+    <div class="social-media__link social-media__link--gp">
+        <a href="https://www.facebook.com/Zabytki-Gdańska-778686898924776" target="_blank">
+            <img src="images/social_googleplus.png">
+        </a>
+    </div>
+    <div class="social-media__link social-media__link--tw">
+        <a href="https://twitter.com/ZabytkiGdanska" target="_blank">
+            <img src="images/social_twitter.png">
+        </a>
+    </div>
+</aside>
+
+<main class="container-fluid">
+    <section class="daneWTabelach table table-striped row">
+
+		<div class="col-xs-10 col-xs-offset-1"><a></a>
+
+            <select id="typyZabytkow">
+                <option value="SpisZabytkowRejestr">obiekty z wpisem do rejestru zabytków</option>
+                <option value="SpisZabytkowCmentarze">cmentarze</option>
+                <option value="SpisZabytkowDomy">domy</option>
+                <option value="SpisZbaytkowKamienice">kamienice</option>
+                <option value="SpisZabytkowKoscioly">kościoły</option>
+                <option value="SpisZabytkowWiadukty">wiadukty</option>
+            </select>
+
+
+			<div id="SpisZabytkowRejestr" class="listaZabytkowWgTypu">
+                <h2>Obiekty z wpisem do rejestru zabytków:</h2>
+            </div>
+
+
+            <div id="SpisZabytkowCmentarze" class="hidden listaZabytkowWgTypu">
+                <h2>Cmentarze:</h2>
+            </div>
+
+            <div id="SpisZabytkowDomy" class="hidden listaZabytkowWgTypu">
+                <h2>Domy:</h2>
+            </div>
+
+
+            <div id="SpisZabytkowKoscioly" class="hidden listaZabytkowWgTypu">
+                <h2>Koscioly:</h2>
+            </div>
+
+
+            <div id="SpisZabytkowWiadukty" class="hidden listaZabytkowWgTypu">
+                <h2>Wiadukty:</h2>
+            </div>
+
+			<hr/>
+
+			<h2>Najważniejsze zabytki Gdańska</h2>
+
+            <select id="selectedMonument">
+                <option value="66">Wybierz Zabytek</option>
+                <option value="0">Bazylika Mariacka</option>
+                <option value="1">Brama Wyżynna</option>
+                <option value="2">Brama Św. Ducha</option>
+                <option value="3">Dom Uphagena</option>
+                <option value="4">Kanał na Stępce</option>
+                <option value="5">Muzeum Narodowe</option>
+                <option value="6">Pomnik Poległych Stoczniowców</option>
+                <option value="7">Ratusz Głównego Miasta</option>
+				<option value="8">Reduta Biskupiej Górki</option>
+				<option value="9">Westerplatte</option>
+				<option value="10">Wyspa Spichrzów</option>
+			</select>
+
+		</div>
+    </section>
+
+    <section class="mapOfGdansk row">
+        <a name="domapy"></a>
+        <div class="col-md-3">
+            <div class="form__info__zabytki">
+                <p class="targetForJSON"></p>
+            </div>
+        </div>
+
+        <section class="col-md-9">
+			<div class="map" id="map"></div>
+			<div class="dane">
+                <h4> DANE Z RZECZYWISTEGO API</h4>
+            </div>
+			<table class="rzeczywisteDane table table-striped">
+                <a name="dozabytki"></a>
+                <tr>
+                    <td class="col-xs-7"> NAZWA ZABYTKU</td>
+                    <td class="col-xs-1"> NR </td>
+                    <td class="col-xs-4"> ULICA </td>
+                </tr>
+            </table>
+        </section>
+
+    </section>
+
+
+    <!--*****info o zabytkach ******-->
+
+</main>
+
+
+<!--FOOTER -->
+<footer>
+    <div class="stopka">Copyright 2016 | All Rights Reserved - Wunder Team</div>
+    <div class="partnerzy">
+        <img src="images/stopka_olivia_center.jpg" alt="Olivia Center logo">
+        <img src="images/stopka_Wteam2.jpg" alt="WunderTeam logo">
+        <a href="http://www.infoshareacademy.com/" target="_blank">
+            <img src="images/stopka_infoshare.svg" alt="InfoShare Academy">
+        </a>
+    </div>
+</footer>
+
+<script src="scripts/jquery-2.1.4.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="scripts/markerclusterer.js"></script>
+<script src="scripts/ajax.js"></script>
+<script src="scripts/csv2jason.js"></script>
+<script src="scripts/moj-json.js"></script>
+<script src="scripts/spis_zabytkow.js"></script>
+
+</body>
+</html>

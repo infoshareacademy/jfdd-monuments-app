@@ -1,0 +1,646 @@
+body {
+
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 300;
+    background-color: #f9f9f9;
+}
+
+
+.header {
+    position: relative;
+    background: url(../images/mainPicture.jpg) no-repeat;
+    background-position: 0 -400px;
+    height: 670px;
+}
+
+@media screen and (max-width: 550px) {
+    .header {
+        height: 335px;
+    }
+}
+
+
+#logo2 {
+    opacity: 0.65;
+    position: absolute;
+    left: 80px;
+    bottom: 61px;
+    width: 210px;
+    height: 330px;
+    z-index: 1000;
+    box-shadow: black 4px 0 5px;
+}
+
+@media screen and (max-width: 550px) {
+    #logo2 {
+        left: 60px;
+        bottom: 61px;
+        width: 125px;
+        height: 195px;
+    }
+}
+
+.motto {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 700;
+    position: absolute;
+    left: 330px;
+    bottom: 60px;
+    text-shadow: black 2px 4px 0;
+    font-size: 70px;
+    z-index: 101;
+}
+
+@media screen and (max-width: 550px) {
+    .motto {
+        font-size: 30px;
+    }
+}
+
+.motto__gdansk, .motto__miasto {
+    display: block;
+
+}
+@media screen and (max-width: 550px) {
+    .motto__gdansk {
+       margin-left: -86px;
+    }
+}
+
+
+.motto__miasto {
+    font-size: 50px;
+    margin-top: 15px;
+
+}
+
+@media screen and (max-width: 550px) {
+    .motto__miasto {
+        font-size: 30px;
+        margin-left: -86px;
+    }
+}
+
+/*MENU*/
+
+.menu_gl {
+    top: 0;
+    right: 0;
+    position: fixed;
+    padding-top: 10px;
+    padding-bottom: 12px;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    z-index: 102;
+    border-left: orange 2px solid;
+}
+
+
+
+
+.menu_div {
+    display: inline;
+    font-size: 25px;
+    padding: 8px;
+    opacity: 0.8;
+    background-color: #000;
+    box-shadow: 10px 5px 5px 1px #000;
+    border-bottom: orange 2px solid;
+
+}
+
+.menu_div_header {
+    padding-left: 25px;
+}
+
+.menu_div_contact {
+    padding-right: 25px;
+}
+
+.menu_div:last-child {
+    opacity:1;
+}
+
+
+@media screen and (max-width: 550px) {
+	.menu_div {
+		display: none;
+		font-size: 15px;
+		padding: 6px !important;
+	}
+		
+	.menu_gl {
+		left: 0;
+	}	
+	.menu_gl:hover .menu_div {
+		display: block;
+	}	
+	.menu_gl:before {
+		float: left;
+		color: white;
+		padding-left: 20px;
+        padding-top: 2px;
+		content: 'menu';
+	}
+	.menu_gl:hover::before {
+		content: none;
+
+	}
+}
+
+/* MENU Hover*/
+
+.hover_orange a{
+    text-decoration: none;
+    color: white;
+}
+
+.hover_orange a:hover {
+    color: orange;
+    border-bottom: 2px orange solid;
+}
+
+.hover_js a {
+    color: sandybrown;
+}
+
+/*MENU Button */
+
+.menu_div_button {
+    background-color: orange;
+    padding: 8px;
+
+}
+
+
+
+.hover_button a {
+    text-decoration: none;
+    color: black;
+
+}
+
+.hover_button a:hover {
+    border-bottom: white 2px solid;
+    color: white;
+}
+
+/* KONIEC MENU */
+
+
+/*ASIDE SOCIAL MEDIA*/
+.social-media {
+    width: 40px;
+    position: fixed;
+    right: 0;
+    top: 50vh;
+    z-index: 1200;
+}
+
+.social-media__link {
+    position: absolute;
+    right: 0;
+}
+
+.social-media__link--fb {
+    top: -63px;
+}
+
+.social-media__link--gp {
+    top: -20px;
+}
+
+.social-media__link--tw {
+    top: 23px;
+}
+
+.social-media__link img {
+    width: 40px;
+}
+
+.social-media__link--fb:hover {
+    width: 55px;
+    height: 40px;
+    background-color: #346da6;
+    border-radius: 5%;
+}
+
+.social-media__link--gp:hover {
+    width: 55px;
+    height: 40px;
+    background-color: #ca4738;
+    border-radius: 5%;
+}
+
+.social-media__link--tw:hover {
+    width: 55px;
+    height: 40px;
+    background-color: #4186cd;
+    border-radius: 5%;
+}
+
+/* Zacheta */
+
+.zacheta {
+    text-transform: uppercase;
+    text-align: justify;
+    /*height: 250px;*/
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 28px;
+    color: #000000;
+    margin: 5% 15% 3% 15%;
+    padding-bottom: 20px;
+}
+
+.zacheta p {
+    margin: 0.5em 0;
+}
+
+@media screen and (max-width: 549px) {
+    .zacheta p {
+        font-size: 18px;
+    }
+}
+
+.zacheta p:first-of-type {
+    font-weight: 700;
+}
+
+
+.fade:hover {
+    opacity: 1;
+}
+
+/* FEATURES */
+
+.features {
+    padding: 40px 0;
+    background: url(../images/Vogel-brama-1.jpg) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.features h2{
+
+    text-align: center;
+    font-size: 50px;
+    padding: 20px 0 60px;
+    color: darkred;
+    font-weight: bolder;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+@media screen and (max-width: 549px) {
+    .features h2 {
+        font-size: 25px;
+    }
+}
+.row {
+    overflow: hidden;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 15px 0;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width: 1000px) {
+	.row {
+		padding: 0;
+	}
+}
+	
+.feature {
+    float: left;
+    margin: 15px 3%;
+    width: 44%;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (max-width: 1024px) {
+	.feature {
+		width: 90%;
+	}
+}
+
+
+
+.feature__img {
+    float: left;
+    margin: 0 15px 15px 0;
+    height: 200px;
+    width: 58%;
+    background-image: url("../images/FunkcjonalnosciRycina7.jpg");
+}
+
+@media screen and (min-width: 550px) and (max-width: 1024px) {
+	.feature__img {
+		width: 40%;
+	}
+}	
+
+@media screen and (max-width: 549px) {
+	.feature__img {
+		display: none ;
+	}
+}
+
+.feature__img:hover{
+    float: left;
+    margin: 0 15px 15px 0;
+    /*height: 150px;*/
+    /*width: 48%;*/
+    background-image: url("../images/FunkcjonalnosciMapaGdanska.jpg");
+    background-repeat: no-repeat;
+    background-position: 0%, 0%;
+    background-size: 100% 100%;
+ 
+}
+
+.feature__title {
+    color: darkred;
+    text-transform: uppercase;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 25px;
+    padding-bottom: 8px;
+}
+
+.feature__descr {
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+}
+
+/* Pojemnik w ktorym znajdują się slajdy */
+.galeriaMusea {
+
+    position: relative;
+    height: 600px;
+}
+
+@media screen and (max-width: 549px) {
+    .galeriaMusea {
+        height: 300px;
+    }
+}
+
+
+/* Galeria slajdów */
+.galeriaMusea div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    display: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+/* 1szy slajd widoczny zeby JS wiedzial co ma animowac */
+.galeriaMusea div:first-child {
+    display: block;
+}
+/* style dla opisów przypisanych slajdom */
+.galeriaMusea p {
+    color: #ffffff;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 400;
+    text-shadow: black 2px 4px 0;
+    font-size: 23px;
+    text-align: right;
+    margin-top: 468px;
+    margin-right: 90px;
+    font-style: italic;
+}
+@media screen and (max-width: 549px) {
+    .galeriaMusea p {
+        margin-top: 250px;
+    }
+}
+
+
+/*ADDITIONAL FEATURES */
+
+.additionalFeatures{
+    background-color: #e7e7e7;
+    padding:3% 5% 3% 15%;
+}
+
+@media screen and (max-width: 549px) {
+    .additionalFeatures {
+        padding-bottom:20%
+    }
+}
+
+
+.additionalFeaturesTitle {
+
+    font-weight: bolder;
+    color: #71706B;
+    font-size: 37px;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+    padding-top: 3%;
+    margin-bottom: 30px;
+    text-align: center;
+
+}
+
+@media screen and (max-width: 549px) {
+    .additionalFeaturesTitle {
+        font-size: 25px;
+        padding-top: 25px;
+    }
+}
+
+
+.additionalFeaturesBox {
+    width: 250px;
+    height: 250px;
+    background-color: white;
+    border-radius: 65%;
+    float: left;
+    text-align: center;
+    margin: 86px;
+}
+
+@media screen and (max-width: 549px) {
+    .additionalFeaturesBox {
+        width: 100px;
+        height: 100px;
+        margin: 10px 10px 25px;
+    }
+}
+
+
+.additionalFeatures div p{
+
+    font-size: 22px;
+    font-weight: lighter;
+    color:#71706B;
+}
+
+@media screen and (max-width: 549px) {
+    .additionalFeatures div p{
+        font-size: 18px;
+
+    }
+}
+
+
+
+.LogoFeatures {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    width: 150px;
+    height:150px;
+    -moz-transition: all 0.4s ease;
+    -webkit-transition: all 0.4s ease;
+    -ms-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+@media screen and (max-width: 549px) {
+    .LogoFeatures {
+        width: 70px;
+        height:68px;
+        padding-top: 15px;
+        padding-bottom: 24px;
+    }
+}
+
+
+.LogoFeatures:hover  {
+
+    -moz-transform: scale(1.15);
+    -webkit-transform: scale(1.15);
+    -o-transform: scale(1.15);
+    -ms-transform: scale(1.15);
+    transform: scale(1.15);
+    z-index: 2;
+
+}
+.clear{
+    clear:both;
+}
+
+
+
+/*CONTACT */
+
+.contact_title {
+    font-weight: bolder;
+    color:#71706B;
+    font-size: 28px;
+    text-transform: uppercase;
+    padding-bottom: 25px;
+    padding-top: 3%;
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 130%;
+}
+
+@media screen and (max-width: 549px) {
+    .contact_title {
+        font-size: 19px;
+        padding: 12px 0;
+    }
+}
+
+.contact {
+    margin: 3% auto;
+    max-width: 1000px;
+    height: 535px;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+@media screen and (max-width: 549px) {
+    .contact {
+        height: 460px;
+    }
+}
+
+
+.contact_form {
+    float: left;
+    background-color: rgba(72,72,72,0.2);
+    padding-left: 35px;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    width: 450px;
+    left: 50%;
+    position: relative;
+    margin-left: -260px;
+    -moz-border-radius: 7px;
+    padding-right: 35px;
+    -webkit-border-radius: 10px;
+}
+
+@media screen and (max-width: 549px) {
+    .contact_form  {
+        height: 280px
+    }
+}
+
+
+.contact_form input {
+    width: 440px;
+    height: 35px;
+    padding-bottom: 20px;
+    margin-bottom:22px;
+    border: none;
+    -webkit-border-radius: 5px;
+}
+
+@media screen and (max-width: 549px) {
+    .contact_form input {
+        height: 28px;
+        margin-bottom:11px;
+    }
+}
+
+
+
+.contact_form input:last-of-type{
+    margin-top:20px;
+    background-color: sandybrown;
+    -webkit-border-radius: 10px;
+    width: 440px;
+    height: 70px;
+    border:none;
+    color:#71706B;
+    font-size:13px;
+    padding-top:5px;
+}
+
+
+
+.stopka {
+    height: 26px;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    background: url(../images/naglowek_gdansk1.jpg);
+    /* padding zamiast height na sztywno ponieważ tak się wysokość dostosuje do zawartości gdyby zawartość miała się zmienić */
+    padding: 20px 20px 10px 20px;
+    text-align: center;
+    text-shadow: black 0 2px 0;
+}
+
+.partnerzy {
+    text-align: center;
+    padding: 8px 20px;
+}
+.partnerzy img {
+    height: 26px;
+}
