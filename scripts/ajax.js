@@ -79,7 +79,7 @@ function showMonumentsWithGeographicalData(data){
 
     monumentsWithCords.map(function(monument) {
         var html = '';
-        html += '<td>' + monument.Obiekt + '</td>';
+        html += '<td><span class="dodajDoWycieczki"></span>' + monument.Obiekt + '</td>';
         html += '<td>' + monument.Ulica + '</td>';
         html += '<td>' + monument.Nr + '</td>';
         return html;
@@ -108,7 +108,6 @@ function showMonumentsWithGeographicalData(data){
             ((minLong + maxLong) / 2.0)
         ));
     });
-
 }
 function fetchZabytki() {
     console.log('fetch zabytki');
@@ -126,3 +125,4 @@ function fetchZabytki() {
 $(document).ready(function() {
     fetchZabytki();
 });
+

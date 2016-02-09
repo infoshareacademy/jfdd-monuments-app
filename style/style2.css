@@ -1,4 +1,4 @@
-﻿body {
+﻿﻿body {
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 300;
     background-color: #f9f9f9;
@@ -297,5 +297,4 @@
     color: orange;
     background-color: darkgrey;
     cursor: pointer;
-    /*cursor: hand;*/
-}
+/*cursor: hand;*/
