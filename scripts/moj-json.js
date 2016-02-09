@@ -13,7 +13,9 @@ $(function () {
     $.ajax({
         url: 'data/wybierz-zabytek.json',
         success: function (item) {
-
+			if(typeof item == 'string') {
+				item = JSON.parse(item);
+			}
             $('.targetForJSON').append(
                 $('<h3>' + item.name + '</h3><p>' + item.description + '</p>')
             );
@@ -35,6 +37,9 @@ function showMonumentDetails(monumentId) {
     $.ajax({
         url: 'data/' + Monuments_Ids[monumentId] + '.json',
         success: function (item) {
+			if(typeof item == 'string') {
+				item = JSON.parse(item);
+			}
             $('.targetForJSON').html(
                 $('<h3>' + item.name + '</h3><p>' + item.description + '</p>')
             );
