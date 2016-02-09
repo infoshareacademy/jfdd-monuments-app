@@ -196,7 +196,7 @@
 }
 
 .map{
-    height: 800px;
+    height: 80vh;
     margin: auto;
     border: 3px solid grey;
     box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
