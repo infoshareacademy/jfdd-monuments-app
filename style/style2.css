@@ -1,4 +1,4 @@
-﻿body {
+body {
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 300;
     background-color: #f9f9f9;
@@ -6,7 +6,7 @@
 
 .header {
     position: relative;
-    background: url("../images/galeriaMuseaPicture4.jpg") no-repeat;
+    background: url("../images/galeriaMuseaPicture3.jpg") no-repeat;
     height: 670px;
     background-size: cover;
 }
