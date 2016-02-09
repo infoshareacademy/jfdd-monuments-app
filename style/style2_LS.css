@@ -297,4 +297,27 @@
     color: orange;
     background-color: darkgrey;
     cursor: pointer;
-/*cursor: hand;*/
+    /*cursor: hand;*/
+}
+
+
+.rzeczywisteDane td {
+    position: relative;
+}
+.dodajDoWycieczki {
+    position: absolute;
+    left: -35px;
+}
+
+.dodajDoWycieczki:before {
+    content: '';
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/plus.png) no-repeat center;
+    background-size: 24px;
+    opacity: 0.8;
+}
+.dodajDoWycieczki:hover::before {
+    opacity: 1;
+}
