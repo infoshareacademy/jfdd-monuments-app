@@ -91,6 +91,23 @@ function showMonumentsWithGeographicalData(data){
         );
     });
 
+    //CENTRE button -jQuery
+    $('#resetMapy').click(function() {
+        var minLat = 180;
+        var maxLat = 0;
+        var minLong = 180;
+        var maxLong = 0;
+        for (var i = 0; i < markerInstances.length; i++ ) {
+            minLat = Math.min(minLat,markerInstances[i].getPosition().lat());
+            maxLat = Math.max(maxLat,markerInstances[i].getPosition().lat());
+            minLong = Math.min(minLong,markerInstances[i].getPosition().lng());
+            maxLong = Math.max(maxLong,markerInstances[i].getPosition().lng());
+        }
+        map.setCenter(new google.maps.LatLng(
+            ((minLat + maxLat) / 2.0),
+            ((minLong + maxLong) / 2.0)
+        ));
+    });
 }
 function fetchZabytki() {
     console.log('fetch zabytki');
