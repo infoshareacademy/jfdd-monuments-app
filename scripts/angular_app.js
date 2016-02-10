@@ -17,7 +17,7 @@ angular.module('Workshop')
             transclude: true,
             scope: {},
             controller: function ($scope, $http) {
-                $http.get('http://www.wp.pl').then(function (response) {
+                $http.get('index.html').then(function (response) {
                     $scope.loginData = response.data;
                 });
             }
