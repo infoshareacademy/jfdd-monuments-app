@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" ng-app="Workshop">
+<html lang="en" >
 <head>
 
     <meta charset="utf-8">
@@ -25,7 +25,8 @@
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
     <!--******************* ANGULAR's SCRIPT ************************-->
-    <script type="text/javascript" src="scripts/angular_app.js"></script>
+
+
 </head>
 
 <body>
@@ -161,6 +162,40 @@
                 <h4> DANE Z RZECZYWISTEGO API</h4>
             </div>
 
+        </section>
+
+        <section ng-app="Favorites">
+
+            <div class="col-md-5 simpleDemo"
+                 ng-controller="BaseController2">
+
+                <ul dnd-list="list">
+
+                    <li ng-repeat="item in models.lists.zabytki"
+                        dnd-draggable="item"
+                        dnd-moved="list.splice($index, 1)"
+                        dnd-effect-allowed="move"
+                        dnd-selected="models.selected = item"
+                        ng-class="{'selected': models.selected === item}"
+                    >
+                        {{item.label}}
+                    </li>
+                </ul>
+
+                <ul dnd-list="list">
+
+                    <li ng-repeat="item in models.lists.ulubione"
+                        dnd-draggable="item"
+                        dnd-moved="list.splice($index, 1)"
+                        dnd-effect-allowed="move"
+                        dnd-selected="models.selected = item"
+                        ng-class="{'selected': models.selected === item}"
+                    >
+                        {{item.label}}
+                    </li>
+                </ul>
+
+            </div>
 
         </section>
     </section>
@@ -225,6 +260,7 @@
 <script src="scripts/jquery-2.1.4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="scripts/angular.js"></script>
+<script type="text/javascript" src="scripts/angular_app.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="scripts/markerclusterer.js"></script>
 <script src="scripts/ajax.js"></script>
@@ -232,6 +268,12 @@
 <script src="scripts/moj-json.js"></script>
 <script src="scripts/spis_zabytkow.js"></script>
 <script src="scripts/planowanie-wycieczek.js"></script>
+<script src="scripts/angular-drag-and-drop-lists.js"></script>
+<script src="scripts/favourites.js"></script>
+
+
+
+
 
 </body>
 </html>
