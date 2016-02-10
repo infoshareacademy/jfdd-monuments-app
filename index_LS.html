@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" >
+<html lang="en" ng-app="Workshop">
 <head>
 
     <meta charset="utf-8">
@@ -164,40 +164,21 @@
 
         </section>
 
-        <section ng-app="Favorites">
+        <section>
 
-            <div class="col-md-5 simpleDemo"
-                 ng-controller="BaseController2">
+            <div class="container">
+                <div class="header clearfix text-left">
+                    <h1 class="text-muted">Ulubione</h1>
+                </div>
 
-                <ul dnd-list="list">
-
-                    <li ng-repeat="item in models.lists.zabytki"
-                        dnd-draggable="item"
-                        dnd-moved="list.splice($index, 1)"
-                        dnd-effect-allowed="move"
-                        dnd-selected="models.selected = item"
-                        ng-class="{'selected': models.selected === item}"
-                    >
-                        {{item.label}}
-                    </li>
-                </ul>
-
-                <ul dnd-list="list">
-
-                    <li ng-repeat="item in models.lists.ulubione"
-                        dnd-draggable="item"
-                        dnd-moved="list.splice($index, 1)"
-                        dnd-effect-allowed="move"
-                        dnd-selected="models.selected = item"
-                        ng-class="{'selected': models.selected === item}"
-                    >
-                        {{item.label}}
-                    </li>
-                </ul>
-
+                <div>
+                    <favorites></favorites>
+                </div>
             </div>
 
+
         </section>
+
     </section>
     <div class="row">
         <div class="col-md-5 trip">
@@ -269,7 +250,7 @@
 <script src="scripts/spis_zabytkow.js"></script>
 <script src="scripts/planowanie-wycieczek.js"></script>
 <script src="scripts/angular-drag-and-drop-lists.js"></script>
-<script src="scripts/favourites.js"></script>
+<script src="directives/favourites.js"></script>
 
 
 

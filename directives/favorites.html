@@ -1,0 +1,58 @@
+<div class="col-xs-8 col-xs-offset-2">
+    <div class="panel panel-default">
+        <div class="panel-heading">Zabytki</div>
+        <div class="panel-body" ng-show="loginData.length">
+            <table class="table table-bordered">
+                <thead>
+                <tr>
+                    <th>zabytki</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="item in loginData track by $index">
+                    <th>{{$index + 1}}</th>
+                    <td>{{item.user}}</td>
+                    <td>{{item.ip}}</td>
+                    <td>{{item.lastLogin}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="panel-body" ng-show="!loginData.length">
+            <div class="text-center"><span class="text-muted">No data available</span></div>
+        </div>
+    </div>
+</div>
+
+
+
+<!--<div class="col-md-5 simpleDemo"-->
+     <!--ng-controller="BaseController2">-->
+
+    <!--<ul dnd-list="list">-->
+
+        <!--<li ng-repeat="item in models.lists.zabytki"-->
+            <!--dnd-draggable="item"-->
+            <!--dnd-moved="list.splice($index, 1)"-->
+            <!--dnd-effect-allowed="move"-->
+            <!--dnd-selected="models.selected = item"-->
+            <!--ng-class="{'selected': models.selected === item}"-->
+        <!--&gt;-->
+            <!--{{item.label}}-->
+        <!--</li>-->
+    <!--</ul>-->
+
+    <!--<ul dnd-list="list">-->
+
+        <!--<li ng-repeat="item in models.lists.ulubione"-->
+            <!--dnd-draggable="item"-->
+            <!--dnd-moved="list.splice($index, 1)"-->
+            <!--dnd-effect-allowed="move"-->
+            <!--dnd-selected="models.selected = item"-->
+            <!--ng-class="{'selected': models.selected === item}"-->
+        <!--&gt;-->
+            <!--{{item.label}}-->
+        <!--</li>-->
+    <!--</ul>-->
+
+<!--</div>-->
