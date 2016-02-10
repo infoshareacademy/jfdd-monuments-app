@@ -321,3 +321,11 @@
 .dodajDoWycieczki:hover::before {
     opacity: 1;
 }
+
+.wycieczka {
+    color: black;
+    margin: 30px 0;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 400;
+    /*font-size: 32px;*/
+}
