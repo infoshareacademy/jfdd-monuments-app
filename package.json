@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test": "echo \"Hello world\" && exit 1",
+    "start": "node index.js"
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node app.js"
   },
@@ -13,6 +15,12 @@
   },
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^2.11.1"
+  },
+  "bugs": {
+    "url": "https://github.com/infoshareacademy/materialy-angular_node/issues"
+  },
   "bugs": {
     "url": "https://github.com/infoshareacademy/materialy-angular_node/issues"
   },

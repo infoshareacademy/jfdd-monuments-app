@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="pl">
+<html lang="en" ng-app="Workshop">
 <head>
 
     <meta charset="utf-8">
@@ -11,19 +11,17 @@
     <title>Zabytki Gdańska</title>
 
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
-    <link href='https://fonts.googleapis.com/css?family=Oswald:700,400,300&subset=latin,latin-ext'
-          rel='stylesheet'
-          type='text/css'>
-
+    <link href='https://fonts.googleapis.com/css?family=Oswald:700,400,300&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
     <!--<link type="text/css" rel="stylesheet" href="style/reset.css">-->
     <!--<link type="text/css" rel="stylesheet" href="style/animate.css">-->
     <!--<link type="text/css" rel="stylesheet" href="style/style2.css">-->
     <!--style2_LS.css bedzie nadpisywal style2.css - wykasowac ten ostatni po ukonczeniu projektu!!-->
     <link type="text/css" rel="stylesheet" href="style/style2_LS.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
-          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+    <!--******************* ANGULAR's SCRIPT ************************-->
+    <script type="text/javascript" src="scripts/angular_app.js"></script>
 </head>
 
 <body>
@@ -205,6 +203,20 @@
 
     <!--*****info o zabytkach ******-->
 
+    <hr>
+
+    <section>
+
+        stara apka
+
+        {{Workshop}}
+
+    </section>
+
+
+
+
+
 </main>
 
 
@@ -222,6 +234,7 @@
 
 <script src="scripts/jquery-2.1.4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="scripts/angular.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="scripts/markerclusterer.js"></script>
 <script src="scripts/ajax.js"></script>
