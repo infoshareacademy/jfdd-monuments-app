@@ -2,6 +2,8 @@
  * Created by Gosia on 21.01.16.
  */
 var markerInstances;
+var map;
+
 function showMonumentsWithGeographicalData(data){
     data = JSON.parse(data);
     console.log(data);
@@ -13,7 +15,6 @@ function showMonumentsWithGeographicalData(data){
         return $.trim(a.Obiekt) > $.trim(b.Obiekt) ? 1 : -1;
     });
 
-    var map;
     var lat = 54.3485481;
     var lng = 18.6510855;
     var zoom = 12;
@@ -31,7 +32,7 @@ function showMonumentsWithGeographicalData(data){
     };
     map = new google.maps.Map(document.getElementById("map"), myOptions);
 
-    var markerInstances = monumentsWithCords.map(function (monument, index) {
+    markerInstances = monumentsWithCords.map(function (monument, index) {
         var image = 'images/blue_MarkerZ.png';
         var myLatLng = new google.maps.LatLng(monument.Dlugosc, monument.Szerokosc);
         var marker = new google.maps.Marker({

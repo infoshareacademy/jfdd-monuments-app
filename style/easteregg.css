@@ -13,7 +13,7 @@
     width: 30px;
     height: 30px;
     position: absolute;
-    top: 415px;
+    bottom: 225px;
     left: 85px;
     z-index: 102;
     cursor: pointer;
@@ -33,7 +33,8 @@
 
 .easter__close {
     background: gray;
-    padding: 0px 10px 16px;
+	color: orange;
+    padding: 27px 10px 27px;
     display: inline-block;
     position: absolute;
 	top: 6px;
@@ -42,12 +43,13 @@
     cursor: pointer;
     font-size: 4em;
     font-weight: 500;
-    line-height: 0.5em;
+    line-height: 0;
 	z-index: 1;
 }
 
 .easter__close:hover {
     color: yellow;
+	text-decoration: none;
 }
 
 .easter__map {
