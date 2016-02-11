@@ -198,7 +198,7 @@
 }
 
 .map{
-    height: 80vh;
+    height: 60vh;
     margin: auto;
     border: 3px solid grey;
     box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
@@ -342,4 +342,30 @@
     background-attachment: fixed;
     box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
     /*background-color: #EEEEEE;*/
+}
+
+#edycjaWycieczki, #zapisaneWycieczki ol {
+	margin-bottom: 5px; 
+}
+
+#edycjaWycieczki li {
+	cursor: pointer;
+}
+
+#zapisaneWycieczki ol {
+	overflow: hidden;
+}
+
+#zapisaneWycieczki ol li {
+	float: left;
+}
+
+#zapisaneWycieczki ol li + li:before  {
+	content: "->";
+	padding: 0 10px;
+}
+
+#zapisaneWycieczki > li div {
+	clear: left;
+	margin-bottom: 20px;
 }

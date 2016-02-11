@@ -44,6 +44,10 @@ $(function () {
 		});
 	}
 	
+	function wyczyscTraseZMapy() {
+		directionsDisplay.setMap(null); 
+	}
+	
     $("#edycjaWycieczki").sortable({
 		//przerysowuje trase wycieczki gdy uzytkownik zmienil kolejnosc
 		stop: function() {
@@ -82,6 +86,10 @@ $(function () {
     });
 
     $('#zapiszWycieczke').click(function () {
+		if($('#edycjaWycieczki li').length < 1) {
+			alert('Dodaj przynajmmniej jeden punkt trasy.');
+			return;
+		}
         var timeStampObecnieEdytowanejWycieczki = $('#edycjaWycieczki').attr('data-id');//odczyt atrybutu data-id z elementu edycji wycieczki. Jezeli pusty to znaczy, ze zapisujemy nowa wycieczke. Jezeli jest liczba (timeStamp) znaczy, ze zapisujemy edytowaną(istniejaca wczesniej) wycieczkę
 		var wycieczkaDoZapisania = $('#edycjaWycieczki').clone(); //
 		if(timeStampObecnieEdytowanejWycieczki) {
@@ -107,7 +115,10 @@ $(function () {
 		window.localStorage.setItem(timeStamp, wycieczkaDoZapisania.html());
 
 		$('#edycjaWycieczki').empty().removeAttr('data-id');
+		
+		wyczyscTraseZMapy();
     });
+	
     //dlatego dokument bo same buttony po zaladowaniu strony mogą jeszcze nie istnieć
     $(document).on('click', '.btn-usun', function () {
         var wycieczkaDoUsuniecia = $(this).closest('li');
@@ -138,6 +149,8 @@ $(function () {
         $('#edycjaWycieczki').empty().append(wycieczkaDoEdycji.find('li')).attr('data-id', timeStamp); //oprozniamy pole edycji wycieczki i wstawiamy ta ktora ma byc teraz edytowana
         wycieczkaDoEdycji.remove(); //..i usuwamy ja z listy wycieczek (z html)
 		
-		//rysuje cala wycieczke na mapie
+		//czysci mape i rysuje obecna wycieczke
+		wyczyscTraseZMapy();
+		przerysujWycieczke();
     });
 });
