@@ -44,10 +44,10 @@ $(function () {
         wycieczkaDoZapisania.removeAttr('id');
         $('#zapisaneWycieczki').append('<li data-id="' + timeStamp + '"> \
                 <div> \
-                <button class="btn btn-edytuj"> \
+                <button class="btn btn-primary btn-edytuj "> \
                 EDYTUJ \
                 </button> \
-                <button class="btn btn-usun"> \
+                <button class="btn btn-primary btn-usun "> \
                 USUŃ \
                 </button> \
                 </div> \
