@@ -16,11 +16,12 @@
           type='text/css'>
 
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
-    <!--<link type="text/css" rel="stylesheet" href="style/reset.css">-->
-    <!--<link type="text/css" rel="stylesheet" href="style/animate.css">-->
+    <link type="text/css" rel="stylesheet" href="style/reset.css">
+    <link type="text/css" rel="stylesheet" href="style/animate.css">
     <!--<link type="text/css" rel="stylesheet" href="style/style2.css">-->
     <!--style2_LS.css bedzie nadpisywal style2.css - wykasowac ten ostatni po ukonczeniu projektu!!-->
     <link type="text/css" rel="stylesheet" href="style/style2_LS.css">
+    <link type="text/css" rel="stylesheet" href="style/easteregg.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
@@ -28,6 +29,22 @@
 
 <body>
 <a name="dogory"></a>
+
+<!--EASTER EGG-->
+<div id="easterEgg" class="easter">
+        <!--<a class="easter__close">×</a>-->
+    <div class="easter__map">
+        <canvas id="EasterLines"></canvas>
+    </div>
+    <div class="easter__counters">
+        <span class="easter__counters__route">Przebyta droga: <em>0</em> m</span>
+        <span class="easter__counters__limit">Limit odległości: <em>X</em> m</span>
+        <span class="easter__counters__highscore">Rekord: <em>0</em></span>
+        <span class="easter__counters__monuments">Odwiedzone zabytki: <em>0</em></span>
+    </div>
+    <div id="EasterWelcome" class="easter__gameover"><h3>Zasady gry</h3><p>Połącz jak najwięcej ikon zabytków klikając na nie lewym przyciskiem myszki. Nie możesz przekroczyć limitu długości trasy.</br><a>&raquo;&raquo;&raquo; START &laquo;&laquo;&laquo;</a></p></div>
+</div>
+<div class="overlay"></div>
 
 <!--NAGLÓWEK-->
 <header class="header">
@@ -169,7 +186,7 @@
             <input type="button" id="zapiszWycieczke" value="ZAPISZ WYCIECZKE" class="btn btn-primary"/>
         </div>
         <div class="col-md-7 col-md-offset-0 col-xs-10 col-xs-offset-1">
-            <h2>PUNKTY DO ODWIEDZENIA</h2>
+            <h2 id="punktyDoOdwiedzenia">PUNKTY DO ODWIEDZENIA</h2>
             <table class="rzeczywisteDane table table-striped">
                 <a name="dozabytki"></a>
                 <tr>
@@ -213,6 +230,8 @@
 <script src="scripts/moj-json.js"></script>
 <script src="scripts/spis_zabytkow.js"></script>
 <script src="scripts/planowanie-wycieczek.js"></script>
+<script src="scripts/easteregg.js"></script>
+
 
 </body>
 </html>

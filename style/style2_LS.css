@@ -7,7 +7,7 @@
 .header {
     position: relative;
     background: url("../images/galeriaMuseaPicture4.jpg") no-repeat;
-    height: 670px;
+    height: 70vh;
     background-size: cover;
 }
 
@@ -178,6 +178,7 @@
     padding-bottom: 20px;
 }
 
+
 /*MapOfGdansk*/
 
 .mapOfGdansk {
@@ -185,6 +186,7 @@
     background: url("../images/Vogel-brama-1.jpg ") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
+    box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
 }
 .mapOfGdansk h2 {
     text-align: center;
@@ -257,6 +259,13 @@
 	padding: 2px; 
 }
 
+@media screen and (max-width: 600px){
+    .listaZabytkowWgTypu td {
+        font-size: 8px;
+    }
+}
+
+
 .listaZabytkowWgTypu tr:nth-child(2n+1) td {
 	background: #eeeeee;
 }
@@ -269,7 +278,6 @@
     font-weight: 400;
     border: 3px solid grey;
     box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
-    font-weight: 400;
 }
 
 #opcjeZabytkow, #selectedMonument, #typyZabytkow {
@@ -327,5 +335,11 @@
     margin: 30px 0;
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 400;
-    /*font-size: 32px;*/
+    border-radius: 10px;
+    padding: 15px;
+    background: url("../images/Vogel-brama-1.jpg ") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
+    /*background-color: #EEEEEE;*/
 }
