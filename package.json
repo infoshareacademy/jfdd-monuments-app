@@ -6,6 +6,8 @@
   "scripts": {
     "test": "echo \"Hello world\" && exit 1",
     "start": "node index.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,13 @@
   },
   "bugs": {
     "url": "https://github.com/infoshareacademy/materialy-angular_node/issues"
+  },
+  "bugs": {
+    "url": "https://github.com/infoshareacademy/materialy-angular_node/issues"
+  },
+  "dependencies": {
+    "bower-sync": "^0.1.0",
+    "browser-sync": "^2.11.1"
   },
   "homepage": "https://github.com/infoshareacademy/materialy-angular_node#readme"
 }
