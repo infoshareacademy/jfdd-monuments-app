@@ -335,7 +335,6 @@
     margin-bottom: 20px;
 }
 
-
 .style__fav {
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-size: 14px;
@@ -345,10 +344,12 @@
     right:0;
     box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
     font-weight: 400;
-    /*margin-top: 85px;*/
 }
 
-
+.panel-heading {
+    background-color: #EEEEEE !important;
+    color: black !important;
+}
 
 .favoritiesMonum ul[dnd-list],
 .favoritiesMonum ul[dnd-list] > li {
