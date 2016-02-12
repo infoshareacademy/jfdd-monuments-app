@@ -345,7 +345,7 @@
 }
 
 #edycjaWycieczki, #zapisaneWycieczki ol {
-	margin-bottom: 5px; 
+	margin-bottom: 5px;
 }
 
 #edycjaWycieczki li {
@@ -369,3 +369,70 @@
 	clear: left;
 	margin-bottom: 20px;
 }
+
+
+/******************ulubione******************/
+
+.header__fav h4{
+    text-transform: uppercase;
+    font-size: 30px;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    color: black;
+    text-align:left;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.style__fav {
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+    border: solid 3px grey;
+    padding: 10px;
+    background: rgba(255,255,255,0.7);
+    right:0;
+    box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
+    font-weight: 400;
+}
+
+.panel-heading {
+    background-color: #EEEEEE !important;
+    color: black !important;
+}
+
+.favoritiesMonum ul[dnd-list],
+.favoritiesMonum ul[dnd-list] > li {
+    position: relative;
+
+}
+
+.favoritiesMonum ul[dnd-list] {
+    min-height: 42px;
+    padding-left: 0px;
+}
+
+.favoritiesMonum ul[dnd-list] .dndDraggingSource {
+    display: none;
+}
+
+.favoritiesMonum ul[dnd-list] .dndPlaceholder {
+    display: block;
+    background-color: #ddd;
+    min-height: 42px;
+}
+
+.favoritiesMonum ul[dnd-list] li {
+    background-color: #fff;
+    border: 1px solid darkgrey;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+}
+
+.favoritiesMonum ul[dnd-list] li.selected {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+

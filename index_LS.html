@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="pl">
+<html lang="pl" ng-app="Workshop">
 <head>
 
     <meta charset="utf-8">
@@ -24,6 +24,9 @@
     <link type="text/css" rel="stylesheet" href="style/easteregg.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
           integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!--******************* ANGULAR's SCRIPT ************************-->
+
 
 </head>
 
@@ -135,6 +138,29 @@
         <section class="col-md-7">
             <div id="resetMapy"><span>CENTRUJ</span></div>
             <div class="map" id="map"></div>
+
+        </section>
+
+        <section class="col-md-12">
+
+            <div class="row">
+                <div class="col-md-5">
+
+                </div>
+
+                <div class="col-md-7">
+
+                    <div class="header__fav">
+                        <h4>Ulubione</h4>
+                    </div>
+
+                    <div>
+                        <favorites></favorites>
+                    </div>
+                </div>
+            </div>
+
+
         </section>
     </section>
     <div class="wycieczka row">
@@ -161,7 +187,7 @@
             <ul id="zapisaneWycieczki"></ul>
         </div>
     </div>
-	
+
     <!--*****info o zabytkach ******-->
 
 </main>
@@ -181,6 +207,9 @@
 
 <script src="scripts/jquery-2.1.4.min.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+<script type="text/javascript" src="scripts/angular.js"></script>
+<script type="text/javascript" src="scripts/angular-drag-and-drop-lists.js"></script>
+<script type="text/javascript" src="scripts/angular_app.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js"></script>
 <script src="scripts/markerclusterer.js"></script>
 <script src="scripts/ajax.js"></script>
@@ -189,6 +218,10 @@
 <script src="scripts/spis_zabytkow.js"></script>
 <script src="scripts/planowanie-wycieczek.js"></script>
 <script src="scripts/easteregg.js"></script>
+<script src="directives/favourites.js"></script>
+
+
+
 
 
 </body>
