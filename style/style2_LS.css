@@ -330,7 +330,11 @@
     font-size: 30px;
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     color: black;
+    text-align:left;
+    margin-top: 50px;
+    margin-bottom: 20px;
 }
+
 
 .style__fav {
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
@@ -341,15 +345,10 @@
     right:0;
     box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
     font-weight: 400;
+    /*margin-top: 85px;*/
 }
 
-.position__fav {
-    float: right;
-}
 
-.clear {
-    clear: both;
-}
 
 .favoritiesMonum ul[dnd-list],
 .favoritiesMonum ul[dnd-list] > li {
