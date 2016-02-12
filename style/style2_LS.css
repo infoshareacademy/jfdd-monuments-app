@@ -186,6 +186,7 @@
     background: url("../images/Vogel-brama-1.jpg ") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
+    border-radius: 10px;
     box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
 }
 .mapOfGdansk h2 {
