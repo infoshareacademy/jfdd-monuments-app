@@ -1,57 +1,32 @@
-<div class="col-xs-8 col-xs-offset-2">
-    <div class="panel panel-default">
-        <div class="panel-heading">Zabytki</div>
-        <div class="panel-body">
-            <!--<table class="table table-bordered">-->
-                <!--<thead>-->
-                <!--<tr>-->
-                    <!--<th>zabytki</th>-->
-                <!--</tr>-->
-                <!--</thead>-->
-                <!--<tbody>-->
-                <!--<tr ng-repeat="item in loginData track by $index">-->
-                    <!--<th>{{$index + 1}}</th>-->
-                    <!--<td>{{item.user}}</td>-->
-                    <!--<td>{{item.ip}}</td>-->
-                    <!--<td>{{item.lastLogin}}</td>-->
-                <!--</tr>-->
-                <!--</tbody>-->
-            <!--</table>-->
-            <div class="row simpleDemo">
-                <div ng-repeat="(listName, list) in models.lists" class="col-md-6">
-                    <div class="panel panel-info">
-                        <div class="panel-heading">
-                            <h3 class="panel-title">List {{listName}}</h3>
-                        </div>
-                        <div class="panel-body">
-                            <ul dnd-list="list">
-                                <!-- The dnd-draggable directive makes an element draggable and will
-                                     transfer the object that was assigned to it. If an element was
-                                     dragged away, you have to remove it from the original list
-                                     yourself using the dnd-moved attribute -->
-                                <li ng-repeat="item in list"
-                                    dnd-draggable="item"
-                                    dnd-moved="list.splice($index, 1); updateFavorites()"
-                                    dnd-effect-allowed="move"
-                                    dnd-selected="models.selected = item"
-                                    ng-class="{'selected': models.selected === item}">
-                                    {{item}}
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+<div class="col-xs-7 style__fav position__fav">
+
+    <div class="row favoritiesMonum">
+        <div ng-repeat="(listName, list) in models.lists" class="col-md-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{listName}}</h3>
                 </div>
+                <div class="panel-body">
+                    <ul dnd-list="list">
 
+                        <li ng-repeat="item in list track by $index"
+                            dnd-draggable="item"
+                            dnd-moved="list.splice($index, 1); updateFavorites()"
+                            dnd-effect-allowed="move"
+                            dnd-selected="models.selected = item"
+                            ng-class="{'selected': models.selected === item}">
+                            {{item}}
+                        </li>
+                    </ul>
+                </div>
             </div>
-
-
-
-
         </div>
-        <!--<div class="panel-body" ng-show="!loginData.length">-->
-            <!--<div class="text-center"><span class="text-muted">No data available</span></div>-->
-        <!--</div>-->
+
     </div>
+
+
 </div>
+
+<div class="clear"></div>
 
 

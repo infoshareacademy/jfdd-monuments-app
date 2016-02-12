@@ -16,26 +16,26 @@ angular.module('Workshop', ['dndLists'])
 
                 $scope.updateFavorites = function () {
                     localStorage.setItem(
-                        'ulubione', $scope.models.lists.ulubione
+                        'Ulubione', $scope.models.lists.Ulubione
                     );
                 };
 
                 $scope.models = {
                     selected: null,
                     lists: {
-                        "zabytki": [],
-                        "ulubione": []
+                        "Zabytki": [],
+                        "Ulubione": []
                     }
                 };
 
-                if (localStorage.getItem('ulubione')) $scope.models.lists.ulubione = localStorage.getItem('ulubione').split(',');
+                if (localStorage.getItem('Ulubione')) $scope.models.lists.Ulubione = localStorage.getItem('Ulubione').split(',');
 
-                $scope.models.lists.zabytki = ['wybierz-zabytek', 'bazylika', 'brama-wyzynna', 'brama-ducha', 'dom-uphagena', 'kanal', 'muzeum-narodowe', 'stoczniowcy', 'ratusz', 'reduta', 'westerplatte', 'wyspa'];
+                $scope.models.lists.Zabytki = [ 'Bazylika Mariacka', 'Brama Wyżynna', 'Brama Św. Ducha', 'Dom Uphagena', 'Kanał na Stępce', 'Muzeum Narodowe', 'Pomnik Poległych Stoczniowców', 'Ratusz Głównego Miasta', 'Reduta Biskupiej Górki', 'Westerplatte', 'Wyspa Spichrzów'];
 
-                for (var i = 0; i < $scope.models.lists.zabytki.length; i++) {
-                    $scope.models.lists.ulubione.forEach(function (ul) {
-                            if (ul == $scope.models.lists.zabytki[i]) {
-                                $scope.models.lists.zabytki.splice(i,1);
+                for (var i = 0; i < $scope.models.lists.Zabytki.length; i++) {
+                    $scope.models.lists.Ulubione.forEach(function (ul) {
+                            if (ul == $scope.models.lists.Zabytki[i]) {
+                                $scope.models.lists.Zabytki.splice(i,1);
                             }
                         }
                     )
