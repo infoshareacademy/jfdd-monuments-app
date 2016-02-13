@@ -77,13 +77,24 @@ $(function () {
     $(document).on('click', '.dodajDoWycieczki', function () {
         var nazwaZabytku = $(this).parent().text();
         var idZabytku = $(this).closest('tr').attr('id');
-        var nowyPunktWycieczki = '<li data-id="' + idZabytku + '">' + nazwaZabytku + '</li>';
+        var nowyPunktWycieczki = '<li data-id="' + idZabytku + '">' + nazwaZabytku + '<span class="usunZWycieczki"></span></li>';
         // console.log(nazwaZabytku, idZabytku, nowyPunktWycieczki);
         $('#edycjaWycieczki').append(nowyPunktWycieczki);
 
 		//jesli jest juz co wysowac (co najmniej dwa punkty trasy) to przerysowuje na nowo trase wycieczki
 		przerysujWycieczke();
     });
+
+	$('#edycjaWycieczki').on('click', '.usunZWycieczki', function() {
+		var zabytekDoUsuniecia = $(this).parent();
+		zabytekDoUsuniecia.remove();
+		if ($('#edycjaWycieczki li').length > 1) {
+			przerysujWycieczke();
+		} else {
+			wyczyscTraseZMapy();
+		}
+	});
+
 
     $('#zapiszWycieczke').click(function () {
 		if($('#edycjaWycieczki li').length < 1) {

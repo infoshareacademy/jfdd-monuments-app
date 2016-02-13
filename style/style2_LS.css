@@ -107,7 +107,6 @@
 
 .hover_orange a:hover {
     color: orange;
-    /*border-bottom: 2px orange solid;*/
     text-decoration: none;
 }
 
@@ -172,7 +171,6 @@
     text-transform: uppercase;
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 300;
-    /*font-size: 30px;*/
     color: #000000;
     margin-top: 30px;
     padding-bottom: 20px;
@@ -287,6 +285,10 @@
     box-shadow: 7px 10px 25px -9px rgba(0,0,0,0.4);
 }
 
+#opcjeZabytkow {
+    margin-top: 20px;
+}
+
 #resetMapy {
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: bold;
@@ -306,24 +308,29 @@
     color: orange;
     background-color: darkgrey;
     cursor: pointer;
-    /*cursor: hand;*/
 }
 
 
 .rzeczywisteDane td {
     position: relative;
 }
+
+.rzeczywisteDane tr:hover .dodajDoWycieczki {
+    display: inline-block;
+}
+
 .dodajDoWycieczki {
     position: absolute;
     left: -35px;
+    display: none;
 }
 
 .dodajDoWycieczki:before {
     content: '';
     display: block;
-    width: 24px;
+    width: 35px;
     height: 24px;
-    background: url(../images/plus.png) no-repeat center;
+    background: url(../images/plus.png) no-repeat left center;
     background-size: 24px;
     opacity: 0.8;
 }
@@ -331,18 +338,37 @@
     opacity: 1;
 }
 
+.usunZWycieczki {
+    /*position: absolute;*/
+    /*left: 35px;*/
+    float: left;
+    visibility: hidden;
+}
+
+.usunZWycieczki:before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/Minus.png) no-repeat center;
+    background-size: 24px;
+    opacity: 0.8;
+}
+.usunZWycieczki:hover::before {
+    opacity: 1;
+}
+
 .wycieczka {
     color: black;
-    margin: 30px 0;
+    margin: 20px 0;
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 400;
     border-radius: 10px;
-    padding: 15px;
+    padding: 40px 0;
     background: url("../images/Vogel-brama-1.jpg ") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
     box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
-    /*background-color: #EEEEEE;*/
 }
 
 #edycjaWycieczki, #zapisaneWycieczki ol {
@@ -351,6 +377,11 @@
 
 #edycjaWycieczki li {
 	cursor: pointer;
+    padding: 6px 0;
+}
+
+#edycjaWycieczki li:hover .usunZWycieczki {
+    visibility: visible;
 }
 
 #zapisaneWycieczki ol {
@@ -375,13 +406,13 @@
 /******************ulubione******************/
 
 .header__fav h4{
-    text-transform: uppercase;
+    /*!*text-transform: uppercase;*!*/
     font-size: 30px;
-    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
-    color: black;
-    text-align:left;
-    margin-top: 50px;
-    margin-bottom: 20px;
+    /*font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;*/
+    /*color: black;*/
+    /*text-align:left;*/
+    /*margin-top: 50px;*/
+    /*margin-bottom: 20px;*/
 }
 
 .style__fav {
@@ -435,5 +466,6 @@
     background-color: #dff0d8;
     color: #3c763d;
 }
+
 
 
