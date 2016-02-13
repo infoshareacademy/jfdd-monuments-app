@@ -114,6 +114,31 @@
     color: sandybrown;
 }
 
+@media screen and (max-width: 550px) {
+    .menu_div {
+        display: none;
+        font-size: 20px;
+        padding: 6px !important;
+    }
+
+    .menu_gl {
+        left: 0;
+    }
+    .menu_gl:hover .menu_div {
+        display: block;
+    }
+    .menu_gl:before {
+        float: left;
+        color: white;
+        padding-left: 20px;
+        padding-top: 5px;
+        content: 'menu';
+    }
+    .menu_gl:hover::before {
+        content: none;
+    }
+}
+
 /*ASIDE SOCIAL MEDIA*/
 .social-media {
     width: 40px;
