@@ -1,0 +1,146 @@
+.overlay {
+    position: fixed;
+    background-color: rgba(0,0,0,0.55);
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    z-index: 666;
+    display: none;
+}
+
+.wywolanie__easteregg {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 225px;
+    left: 85px;
+    z-index: 102;
+    cursor: pointer;
+}
+
+.easter {
+    position: fixed;
+    left: 15vw;
+    right: 15vw;
+    top: 10vh;
+    z-index: 1000;
+    display: none;
+    padding: 10px;
+    background-color: black;
+    border-radius: 10px;
+}
+
+.easter__close {
+    background: gray;
+	color: orange;
+    padding: 27px 10px 27px;
+    display: inline-block;
+    position: absolute;
+	top: 6px;
+	right: 6px;
+    border-radius: 5%;
+    cursor: pointer;
+    font-size: 4em;
+    font-weight: 500;
+    line-height: 0;
+	z-index: 1;
+}
+
+.easter__close:hover {
+    color: yellow;
+	text-decoration: none;
+}
+
+.easter__map {
+    background-image: url('../images/easteregg_map_4.jpg');
+    background-position: center;
+    height: 70vh;
+    background-size: cover;
+    /*background-color: white;*/
+	position: relative;
+}
+
+.easter__counters {
+    color: white;
+    font-size: 1.5em;
+    padding:5px;
+}
+
+.easter__counters__monuments, .easter__counters__highscore {
+    float: right;
+}
+
+.easter__counters span {
+    padding:10px;
+    display: inline-block;
+}
+
+.easter__counters em {
+    color: yellow;
+    font-style: normal;
+}
+
+/*Wstawianie punktów w eastergg*/
+
+.symbol-zabytku {
+	width:  20px;
+	height: 30px;
+	background: url(../images/museum.png);
+	background-size: 100% 30px;
+	background-color: rgba(0,0,0,0.1);
+	border-radius: 40% 40% 20% 20%;
+	position: absolute;
+	transform: translateX(-50%) translateY(-50%);
+}
+
+.symbol-zabytku.klikniety {
+	background-color: orange;
+}
+
+.easter__gameover {
+    width: 70vw; /*na poziom to vw a nie vh*/
+	max-width: 520px; 
+    color: yellow;
+    transform: translateX(-50%) translateY(-50%);
+    border-radius: 10px;
+    position: fixed;
+    margin: 0 auto;
+    top: 50vh;
+	left: 50vw;
+	transform: translateX(-50%) translateY(-50%);
+    z-index: 2000;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0.85);
+    font-size: 2em;
+    text-align: center;
+    text-overline: 2px;
+    text-overline-color: red;
+}
+
+#EasterWelcome {
+	display: inline-block;
+	font-size: 1.3em;
+	height: auto;
+}
+
+#EasterWelcome h3 {
+	font-size: 1.4em;
+	padding-bottom: 0.5em;
+}
+
+#EasterWelcome p {
+	line-height: 1.3;
+}
+
+#EasterWelcome a {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+#EasterLines {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}
