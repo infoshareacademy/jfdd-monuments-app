@@ -222,7 +222,7 @@
 }
 
 .map{
-    height: 60vh;
+    height: 100vh;
     margin: auto;
     border: 3px solid grey;
     box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
@@ -310,6 +310,10 @@
     box-shadow: 7px 10px 25px -9px rgba(0,0,0,0.4);
 }
 
+#selectedMonument {
+    margin: 10px 0 9px;
+}
+
 #opcjeZabytkow {
     margin-top: 20px;
 }
@@ -364,9 +368,10 @@
 }
 
 .usunZWycieczki {
-    /*position: absolute;*/
-    /*left: 35px;*/
-    float: left;
+    position: absolute;
+    left: 0;
+    top: 3px;
+    /*float: left;*/
     visibility: hidden;
 }
 
@@ -402,7 +407,8 @@
 
 #edycjaWycieczki li {
 	cursor: pointer;
-    padding: 6px 0;
+    padding: 6px 0 6px 30px;
+    position: relative;
 }
 
 #edycjaWycieczki li:hover .usunZWycieczki {
@@ -425,6 +431,10 @@
 #zapisaneWycieczki > li div {
 	clear: left;
 	margin-bottom: 20px;
+}
+
+#zapisaneWycieczki .usunZWycieczki {
+    display: none;
 }
 
 

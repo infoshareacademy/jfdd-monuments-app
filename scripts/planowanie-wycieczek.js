@@ -37,15 +37,32 @@ $(function () {
 			travelMode: google.maps.TravelMode.WALKING
 		};
 		directionsService.route(daneDoNarysowania, function(result, status) {
+			console.log(result);
 			if (status == google.maps.DirectionsStatus.OK) {
 				directionsDisplay.setDirections(result);
                 directionsDisplay.setMap(map);
+
+				var sumaOdleglosci = result.routes[0].legs.reduce(function(odleglosc, odcinek) {
+					return odleglosc + odcinek.distance.value;
+				},0);
+				sumaOdleglosci = sumaOdleglosci / 1000;
+				sumaOdleglosci = Math.round(sumaOdleglosci * 10 ) / 10;
+				$('#dlugoscTrasy').text(sumaOdleglosci + ' km');
+
+				var czasPrzejscia = result.routes[0].legs.reduce(function(czas, odcinek) {
+					return czas + odcinek.duration.value;
+				},0);
+				czasPrzejscia = czasPrzejscia / 60;
+				czasPrzejscia = Math.round(czasPrzejscia);
+				$('#czasPrzejscia').text(czasPrzejscia + ' min');
 			}
 		});
 	}
 	
 	function wyczyscTraseZMapy() {
-		directionsDisplay.setMap(null); 
+		directionsDisplay.setMap(null);
+		$('#dlugoscTrasy').text('');
+		$('#czasPrzejscia').text('');
 	}
 	
     $("#edycjaWycieczki").sortable({

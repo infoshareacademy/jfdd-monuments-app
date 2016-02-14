@@ -131,6 +131,10 @@
                     <option value="10">Wyspa Spichrzów</option>
                 </select>
 
+                <div class="form__info__zabytki">
+                    <p class="targetForJSON"></p>
+                </div>
+
             </div>
 
             <div class="col-md-7">
@@ -148,13 +152,8 @@
 
     <section class="mapOfGdansk row">
         <a name="domapy"></a>
-        <div class="col-md-5">
-            <div class="form__info__zabytki">
-                <p class="targetForJSON"></p>
-            </div>
-        </div>
 
-        <section class="col-md-7">
+        <section class="col-md-12">
             <div id="resetMapy"><span>CENTRUJ</span></div>
             <div class="map" id="map"></div>
 
@@ -163,12 +162,20 @@
 
     </section>
     <div class="wycieczka row">
-        <div class="col-md-5 trip">
+        <div class="col-md-2 trip">
             <h2>NOWA WYCIECZKA</h2>
             <ol id="edycjaWycieczki"></ol>
             <input type="button" id="zapiszWycieczke" value="ZAPISZ WYCIECZKE" class="btn btn-primary"/>
+
+        <div><h3>DŁUGOŚĆ TRASY</h3>
+            <span id="dlugoscTrasy"></span>
         </div>
-        <div class="col-md-7 col-md-offset-0 col-xs-10 col-xs-offset-1">
+        <div><h3>CZAS PRZEJŚCIA</h3>
+            <span id="czasPrzejscia"></span>
+        </div>
+
+        </div>
+        <div class="col-md-5 col-md-offset-0 col-xs-10 col-xs-offset-1">
             <h2 id="punktyDoOdwiedzenia">PUNKTY DO ODWIEDZENIA</h2>
             <table class="rzeczywisteDane table table-striped">
                 <a name="dozabytki"></a>
@@ -179,9 +186,7 @@
                 </tr>
             </table>
         </div>
-    </div>
-    <div class="wycieczka row">
-        <div class="col-md-12">
+        <div class="col-md-5">
             <h2>TWOJE WYCIECZKI</h2>
             <ul id="zapisaneWycieczki"></ul>
         </div>
