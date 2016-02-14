@@ -6,8 +6,8 @@
 
 .header {
     position: relative;
-    background: url("../images/galeriaMuseaPicture3.jpg") no-repeat;
-    height: 670px;
+    background: url("../images/galeriaMuseaPicture4.jpg") no-repeat;
+    height: 70vh;
     background-size: cover;
 }
 
@@ -107,12 +107,36 @@
 
 .hover_orange a:hover {
     color: orange;
-    /*border-bottom: 2px orange solid;*/
     text-decoration: none;
 }
 
 .hover_js a {
     color: sandybrown;
+}
+
+@media screen and (max-width: 550px) {
+    .menu_div {
+        display: none;
+        font-size: 20px;
+        padding: 6px !important;
+    }
+
+    .menu_gl {
+        left: 0;
+    }
+    .menu_gl:hover .menu_div {
+        display: block;
+    }
+    .menu_gl:before {
+        float: left;
+        color: white;
+        padding-left: 20px;
+        padding-top: 5px;
+        content: 'menu';
+    }
+    .menu_gl:hover::before {
+        content: none;
+    }
 }
 
 /*ASIDE SOCIAL MEDIA*/
@@ -172,11 +196,11 @@
     text-transform: uppercase;
     font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
     font-weight: 300;
-    /*font-size: 30px;*/
     color: #000000;
     margin-top: 30px;
     padding-bottom: 20px;
 }
+
 
 /*MapOfGdansk*/
 
@@ -185,6 +209,8 @@
     background: url("../images/Vogel-brama-1.jpg ") no-repeat center;
     background-size: cover;
     background-attachment: fixed;
+    border-radius: 10px;
+    box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
 }
 .mapOfGdansk h2 {
     text-align: center;
@@ -196,7 +222,7 @@
 }
 
 .map{
-    height: 80vh;
+    height: 100vh;
     margin: auto;
     border: 3px solid grey;
     box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
@@ -257,6 +283,13 @@
 	padding: 2px; 
 }
 
+@media screen and (max-width: 600px){
+    .listaZabytkowWgTypu td {
+        font-size: 8px;
+    }
+}
+
+
 .listaZabytkowWgTypu tr:nth-child(2n+1) td {
 	background: #eeeeee;
 }
@@ -269,13 +302,20 @@
     font-weight: 400;
     border: 3px solid grey;
     box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
-    font-weight: 400;
 }
 
 #opcjeZabytkow, #selectedMonument, #typyZabytkow {
     font-size: 20px;
     background: #EEEEEE;
     box-shadow: 7px 10px 25px -9px rgba(0,0,0,0.4);
+}
+
+#selectedMonument {
+    margin: 10px 0 9px;
+}
+
+#opcjeZabytkow {
+    margin-top: 20px;
 }
 
 #resetMapy {
@@ -297,27 +337,176 @@
     color: orange;
     background-color: darkgrey;
     cursor: pointer;
-    /*cursor: hand;*/
 }
 
 
 .rzeczywisteDane td {
     position: relative;
 }
+
+.rzeczywisteDane tr:hover .dodajDoWycieczki {
+    display: inline-block;
+}
+
 .dodajDoWycieczki {
     position: absolute;
     left: -35px;
+    display: none;
 }
 
 .dodajDoWycieczki:before {
     content: '';
     display: block;
-    width: 24px;
+    width: 35px;
     height: 24px;
-    background: url(../images/plus.png) no-repeat center;
+    background: url(../images/plus.png) no-repeat left center;
     background-size: 24px;
     opacity: 0.8;
 }
 .dodajDoWycieczki:hover::before {
     opacity: 1;
 }
+
+.usunZWycieczki {
+    position: absolute;
+    left: 0;
+    top: 3px;
+    /*float: left;*/
+    visibility: hidden;
+}
+
+.usunZWycieczki:before {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background: url(../images/Minus.png) no-repeat center;
+    background-size: 24px;
+    opacity: 0.8;
+}
+.usunZWycieczki:hover::before {
+    opacity: 1;
+}
+
+.wycieczka {
+    color: black;
+    margin: 20px 0;
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-weight: 400;
+    border-radius: 10px;
+    padding: 40px 0;
+    background: url("../images/Vogel-brama-1.jpg ") no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
+}
+
+#edycjaWycieczki, #zapisaneWycieczki, #zapisaneWycieczki ol {
+	margin-bottom: 5px;
+    padding-left: 0;
+}
+
+#edycjaWycieczki li {
+	cursor: pointer;
+    padding: 6px 0 6px 30px;
+    position: relative;
+    list-style-type: none;
+}
+
+#edycjaWycieczki li:hover .usunZWycieczki {
+    visibility: visible;
+}
+
+#zapisaneWycieczki ol {
+	overflow: hidden;
+    padding-left: 0;
+}
+
+#zapisaneWycieczki li {
+    list-style-type: none;
+}
+#zapisaneWycieczki ol li {
+	float: left;
+}
+
+#zapisaneWycieczki ol li + li:before  {
+	content: "->";
+	padding: 0 10px;
+}
+
+#zapisaneWycieczki > li div {
+	clear: left;
+	margin-bottom: 20px;
+}
+
+#zapisaneWycieczki .usunZWycieczki {
+    display: none;
+}
+
+
+/******************ulubione******************/
+
+.header__fav h4{
+    /*!*text-transform: uppercase;*!*/
+    font-size: 30px;
+    /*font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;*/
+    /*color: black;*/
+    /*text-align:left;*/
+    /*margin-top: 50px;*/
+    /*margin-bottom: 20px;*/
+}
+
+.style__fav {
+    font-family: "Oswald", Arial, Helvetica Neue, Helvetica, sans-serif;
+    font-size: 14px;
+    border: solid 3px grey;
+    padding: 10px;
+    background: rgba(255,255,255,0.7);
+    right:0;
+    box-shadow: 6px 15px 32px 0px rgba(0,0,0,0.4);
+    font-weight: 400;
+}
+
+.panel-heading {
+    background-color: #EEEEEE !important;
+    color: black !important;
+}
+
+.favoritiesMonum ul[dnd-list],
+.favoritiesMonum ul[dnd-list] > li {
+    position: relative;
+
+}
+
+.favoritiesMonum ul[dnd-list] {
+    min-height: 42px;
+    padding-left: 0px;
+}
+
+.favoritiesMonum ul[dnd-list] .dndDraggingSource {
+    display: none;
+}
+
+.favoritiesMonum ul[dnd-list] .dndPlaceholder {
+    display: block;
+    background-color: #ddd;
+    min-height: 42px;
+}
+
+.favoritiesMonum ul[dnd-list] li {
+    background-color: #fff;
+    border: 1px solid darkgrey;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+}
+
+.favoritiesMonum ul[dnd-list] li.selected {
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+
+
+

@@ -18,16 +18,38 @@
     <!--<link type="text/css" rel="stylesheet" href="style/style2.css">-->
     <!--style2_LS.css bedzie nadpisywal style2.css - wykasowac ten ostatni po ukonczeniu projektu!!-->
     <link type="text/css" rel="stylesheet" href="style/style2_LS.css">
+    <link type="text/css" rel="stylesheet" href="style/easteregg.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
+    <script src="scripts/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+    <script src="https://maps.googleapis.com/maps/api/js"></script>
+    <script src="scripts/markerclusterer.js"></script>
 </head>
 
 <body>
 <a name="dogory"></a>
 
+<!--EASTER EGG-->
+<div id="easterEgg" class="easter">
+    <a class="easter__close">×</a>
+    <div class="easter__map">
+        <canvas id="EasterLines"></canvas>
+    </div>
+    <div class="easter__counters">
+        <span class="easter__counters__route">Przebyta droga: <em>0</em> m</span>
+        <span class="easter__counters__limit">Limit odległości: <em>X</em> m</span>
+        <span class="easter__counters__highscore">Rekord: <em>0</em></span>
+        <span class="easter__counters__monuments">Odwiedzone zabytki: <em>0</em></span>
+    </div>
+    <div id="EasterWelcome" class="easter__gameover"><h3>Zasady gry</h3><p>Połącz jak najwięcej ikon zabytków klikając na nie lewym przyciskiem myszki. Nie możesz przekroczyć limitu długości trasy.</br><a>&raquo;&raquo;&raquo; START &laquo;&laquo;&laquo;</a></p></div>
+</div>
+<div class="overlay"></div>
+
 <!--NAGLÓWEK-->
 <header class="header">
-
+    <div class="wywolanie__easteregg"></div>
     <img id="logo2" src="images\obraz_1196.jpg">
 
     <!--MOTTO GDANSK-->
@@ -41,7 +63,6 @@
     </h1>
 </header>
 
-
 <!--MENU-->
 <nav class="menu_gl">
     <div>
@@ -50,12 +71,16 @@
             <a href="#dogory">Główna</a>
         </div>
 
+        <div class="menu_div_header menu_div hover_orange">
+            <a href="#doUlubione">Ulubione</a>
+        </div>
+
         <div class="menu_div_feat menu_div hover_orange">
             <a href="#domapy">Mapa</a>
         </div>
 
         <div class="menu_div_contact menu_div hover_orange">
-            <a href="#dozabytki">Zabytki</a>
+            <a href="#dozabytki">Wycieczka</a>
         </div>
 
     </div>
@@ -82,55 +107,52 @@
 
 <main class="container-fluid">
 
-    <div class="row">
-        <div class="col-md-5 trip">
-            <h2>NOWA WYCIECZKA</h2>
-            <ol id="edycjaWycieczki"></ol>
-            <input type="button" id="zapiszWycieczke" value="ZAPISZ WYCIECZKE" class="btn btn-primary"/>
+    <!--Łukaszowe-->
+
+    <section class="row wycieczka">
+        <a name="doUlubione"></a>
+        <div class="col-md-5">
+
+            <select id="selectedMonument">
+                <option value="66">Wybierz Zabytek</option>
+                <option value="0">Bazylika Mariacka</option>
+                <option value="1">Brama Wyżynna</option>
+                <option value="2">Brama Św. Ducha</option>
+                <option value="3">Dom Uphagena</option>
+                <option value="4">Kanał na Stępce</option>
+                <option value="5">Muzeum Narodowe</option>
+                <option value="6">Pomnik Poległych Stoczniowców</option>
+                <option value="7">Ratusz Głównego Miasta</option>
+                <option value="8">Reduta Biskupiej Górki</option>
+                <option value="9">Westerplatte</option>
+                <option value="10">Wyspa Spichrzów</option>
+            </select>
+
+            <div class="form__info__zabytki">
+                <p class="targetForJSON"></p>
+            </div>
+
         </div>
+
         <div class="col-md-7">
-            <h2>PUNKTY DO ODWIEDZENIA</h2>
-            <table class="rzeczywisteDane table table-striped">
-                <a name="dozabytki"></a>
-                <tr>
-                    <td class="col-xs-5"> NAZWA ZABYTKU</td>
-                    <td class="col-xs-2"> NR </td>
-                    <td class="col-xs-5"> ULICA </td>
-                </tr>
-            </table>
+
+            <div class="header__fav">
+                <h4>ULUBIONE</h4>
+            </div>
+
+            <div>
+                <favorites></favorites>
+            </div>
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2>TWOJE WYCIECZKI</h2>
-            <ul id="zapisaneWycieczki">
-                <li>
-                    <p>
-                        <span>ZABYTEK-1</span>
-                        <span>ZABYTEK-2</span>
-                        <span>ZABYTEK-3</span>
-                    </p>
-                    <div>
-                        <button class="btn btn-edytuj">
-                            EDYTUJ
-                        </button>
-                        <button class="btn btn-usun">
-                            USUŃ
-                        </button>
-                    </div>
-                </li>
-            </ul>
-        </div>
-    </div>
+
+    </section>
 
     <!--*****info o zabytkach ******-->
 
     <hr>
 
     <section>
-        <div ng-controller="BaseController">
-            <div class="stara-apka"></div>
-        </div>
+        <stara-apka></stara-apka>
     </section>
 
 </main>
@@ -148,17 +170,11 @@
     </div>
 </footer>
 
-<script src="scripts/jquery-2.1.4.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
-<script type="text/javascript" src="scripts/angular.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<!--<script src="scripts/markerclusterer.js"></script>-->
-<script src="scripts/ajax.js"></script>
-<!--<script src="scripts/csv2jason.js"></script>-->
-<!--<script src="scripts/moj-json.js"></script>-->
-<!--<script src="scripts/spis_zabytkow.js"></script>-->
-<script src="scripts/planowanie-wycieczek.js"></script>
+<script src="scripts/easteregg.js"></script>
 
+<script type="text/javascript" src="scripts/angular.js"></script>
+<script type="text/javascript" src="scripts/angular-drag-and-drop-lists.js"></script>
+<script src="directives/favourites.js"></script>
 <script type="text/javascript" src="scripts/angular_app.js"></script>
 
 </body>
